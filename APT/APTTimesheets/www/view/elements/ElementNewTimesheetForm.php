@@ -125,7 +125,7 @@
                 switch ($timesheetStatus) {
                     case 'pending':
                         echo
-                            '<button type="submit" class="pure-button pure-button-primary">Submit new timesheet</button>
+                            '<button type="submit" class="pure-button pure-button-primary">Change timesheet</button>
                             <br><br>';
                         break;
                     case 'rejected':
@@ -133,7 +133,7 @@
                         break;
                     default:
                         echo 'default state';
-                        '<button type="submit" class="pure-button pure-button-primary">Submit new timesheet</button>
+                        echo '<button type="submit" class="pure-button pure-button-primary">Submit new timesheet</button>
                             <br><br>';
                 }
             ?>

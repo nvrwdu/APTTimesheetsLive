@@ -21,10 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" id="1f5a5864-6e18-4279-a5de-3a7e2cafb29b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/www/action/ActionNewTimesheet.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/action/ActionNewTimesheet.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/action/ActionTimesheetRow.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/action/ActionTimesheetRow.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/www/class/Timesheet.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/class/Timesheet.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/www/view/elements/ElementMainMenu.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/view/elements/ElementMainMenu.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/view/elements/ElementNewTimesheetForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/view/elements/ElementNewTimesheetForm.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/www/view/views/ViewTimesheetNew.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/view/views/ViewTimesheetNew.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -86,7 +84,7 @@
       <option name="presentableId" value="Default" />
       <updated>1600354933027</updated>
       <workItem from="1600354934928" duration="34788000" />
-      <workItem from="1600613319887" duration="74636000" />
+      <workItem from="1600613319887" duration="75577000" />
     </task>
     <servers />
   </component>
