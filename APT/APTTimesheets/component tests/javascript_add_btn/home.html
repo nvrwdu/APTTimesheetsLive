@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <form method="post">
+        <div id="people-container">
+            <h3>Person 1:</h3>
+            <p>
+                <label>First name</label><br>
+                <input name="people[1][first_name]">
+            </p>
+
+            <p>
+                <label>Last name</label><br>
+                <input name="people[1][last_name]">
+            </p>
+
+            <p>
+                <label>Email</label><br>
+                <input name="people[1][email]">
+            </p>
+
+            <h3>Person 2:</h3>
+            <p>
+                <label>First name</label><br>
+                <input name="people[2][first_name]">
+            </p>
+
+            <p>
+                <label>Last name</label><br>
+                <input name="people[2][last_name]">
+            </p>
+
+            <p>
+                <label>Email</label><br>
+                <input name="people[2][email]">
+            </p>
+        </div>
+
+        <a href="javascript:;" id="add-new-person" class="add-new-person">Add! new person</a>
+
+        <p>
+        <input type="submit" value="Save">
+        </p>
+    </form>
+
+</body>
+
+<script src="main.js"></script>
+
+</html>

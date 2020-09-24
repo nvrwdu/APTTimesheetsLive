@@ -1,0 +1,30 @@
+.main-timesheet-container {
+	width: 300px;
+	margin: 0 auto;
+}
+
+
+#textarea-unplanned-work-comments-box {
+	resize: none;
+	width: 215px;
+	height: 100px;
+}
+
+
+#textarea-timesheet-comments-box {
+	resize: none;
+	width: 300px;
+	height: 200px;
+	margin: 0 auto;
+}
+
+
+legend {
+	font-size: 25px;
+}
+
+
+.date-timefrom-timeto-container {
+	display: inline-block;
+	margin-top: 20px;
+}

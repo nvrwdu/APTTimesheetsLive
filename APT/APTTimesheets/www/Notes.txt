@@ -1,0 +1,113 @@
+APT Timesheet Web App Notes
+
+
+** DATABASE NOTES
+
+	Database: bfsskcwe2vodwtqgcre0
+
+
+	CREATE TABLE Timesheets (
+	   TimesheetID INT AUTO_INCREMENT NOT NULL,
+	   Date DATE     NOT NULL,
+	   TimeFrom  TIME NOT NULL,
+	   TimeTo TIME NOT NULL, 
+	   Contract VARCHAR(20) NOT NULL,
+	   JobNumber VARCHAR(20) NOT NULL,
+	   Estimate VARCHAR(20) NOT NULL,
+	   Exchange VARCHAR(20) NOT NULL,
+	   PRIMARY KEY (TimesheetID)
+	);
+
+
+	CREATE TABLE Synthetics (
+	   SyntheticID INT NOT NULL AUTO_INCREMENT,
+	   TimesheetID INT,
+	   Name VARCHAR(10) NOT NULL,
+	   Quantity INT NOT NULL,
+	   PRIMARY KEY (SyntheticID),
+	   FOREIGN KEY (TimesheetID) REFERENCES Timesheets (TimesheetID)
+	);
+
+
+	CREATE TABLE Users (
+		UserID INT NOT NULL AUTO_INCREMENT,
+		Name VARCHAR(20) NOT NULL,
+		Email VARCHAR(30) NOT NULL,
+		PRIMARY KEY (UserID)
+	);
+
+
+** APP ARCHITECTURE
+	Database
+		clever-cloud.com
+	Hosting and deployement
+		Heroku
+	Distributed source control
+		Github
+
+
+
+** APP FUNCTIONALITY
+
+	Testing
+		Use historical timesheets from say the past month from 4 users.
+		Input data. Judge app performace.
+
+	Name splitting
+		There should be one member who is the head of group.
+		How does this effect the apps functionality ?
+
+	Attachments
+		The ability to attach photos to timesheets, with type : A55, Box to Box (or other)
+
+	Email dispatch notification
+		Done. Emails can be dispatched using PHPMailer.
+
+	Database schema
+		Under development
+
+	Autosearch for unit synthetic
+		Look for potential solutions. JQuery seems viable.
+
+	Time restriction
+		Timesheets can only be submitted if the current time lies within the valid range.
+		Otherwise, the timesheet will be submitted, but will be processed for the following week.
+
+	Correctly formatted form
+
+	User login
+
+	Associate gang member with an admin
+		Each user is associated with one admin.
+
+
+
+** APP PRIORITY FUNCTIONALITY FOR 14/09/2020
+	User login functionality
+		Login form
+		Create users and user types
+			User types :
+				Gang_member - Submit, amend timesheets
+				Admin - Submit, amend, change timesheet status
+				Super - Submit, amend, change timesheet status, view all timesheets, process late timesheets
+
+	Submit timesheets
+		A form should be ready to login as a gang member or an admin to perform their relative
+		functions.
+
+
+
+** DEVELOPMENTS
+	iOS app
+	Holiday request
+
+** TASKS
+	Add timesheet status
+
+
+
+
+
+
+
+

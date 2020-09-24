@@ -1,0 +1,16 @@
+body {
+  padding: 2em;
+}
+
+[type=submit] {
+  padding: 0.5em 2em;
+}
+
+.add-new-person {
+  background: #6688dd;
+  border-radius: 0.25em;
+  color: #fff;
+  display: inline-block;
+  padding: 0.5em;
+  text-decoration: none;
+}
