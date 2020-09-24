@@ -7,7 +7,7 @@
 
         //print_r($_SESSION['singleTimesheet'][0]['Contract']);
         $singleTimesheet = $_SESSION['singleTimesheet'];
-        print_r($singleTimesheet);
+        //print_r($singleTimesheet);
 
         ?>
 
@@ -77,8 +77,8 @@
                 $timesheet = new \Phppot\Timesheet();
                 $plannedSynthetics = $timesheet->getPlannedSynthetics($singleTimesheet, 'planned');
                 $unplannedSynthetics = $timesheet->getPlannedSynthetics($singleTimesheet, 'unplanned');
-                print_r($plannedSynthetics[0]);
-                print_r($unplannedSynthetics[0]);
+                //print_r($plannedSynthetics[0]);
+                //print_r($unplannedSynthetics[0]);
 
                 // Now loop over planned and unplanned synthetics, creating html dynamically.
 
@@ -120,7 +120,8 @@
                 // If 'pending' status, render, 'new' and 'change buttons
                 // If 'rejected status, render, 'amend' button
 
-                echo $timesheetStatus = $singleTimesheet[0]['Status'];
+                // Current timesheet status from $_GET
+                //echo $timesheetStatus = $singleTimesheet[0]['Status'];
 
                 switch ($timesheetStatus) {
                     case 'pending':
@@ -132,7 +133,7 @@
                         echo '<button type="button" class="pure-button pure-button-primary">Amend timesheet</button>';
                         break;
                     default:
-                        echo 'default state';
+                        //echo 'default state';
                         echo '<button type="submit" class="pure-button pure-button-primary">Submit new timesheet</button>
                             <br><br>';
                 }

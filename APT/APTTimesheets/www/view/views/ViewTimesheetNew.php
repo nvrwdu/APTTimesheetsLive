@@ -37,9 +37,9 @@ use \Phppot\Member;
 
 
 
-echo "Email: " . $_SESSION["userEmail"];
+//echo "Email: " . $_SESSION["userEmail"];
 
-echo "action" . $_GET['action'];
+//echo "action" . $_GET['action'];
 if ($_GET['action'] == 'newtimesheet') {
     $_SESSION['singleTimesheet'] = '';
 }

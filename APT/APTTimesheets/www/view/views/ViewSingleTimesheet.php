@@ -44,7 +44,7 @@ use \Phppot\Member;
 $timesheet = new Timesheet();
 $timesheet = $timesheet->getTimesheetById(55);
 
-print_r($timesheet);
+//print_r($timesheet);
 $timesheetSummaryRenderView = new TimesheetSummaryRenderView();
 $timesheetSummaryRenderView->renderSingleTimesheet($timesheet);
 

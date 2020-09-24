@@ -20,10 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1f5a5864-6e18-4279-a5de-3a7e2cafb29b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/www/action/ActionNewTimesheet.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/action/ActionNewTimesheet.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/www/class/Timesheet.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/class/Timesheet.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/www/view/elements/ElementMainMenu.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/view/elements/ElementMainMenu.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/view/views/ViewTimesheetNew.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/view/views/ViewTimesheetNew.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +82,7 @@
       <option name="presentableId" value="Default" />
       <updated>1600354933027</updated>
       <workItem from="1600354934928" duration="34788000" />
-      <workItem from="1600613319887" duration="75577000" />
+      <workItem from="1600613319887" duration="76092000" />
     </task>
     <servers />
   </component>
@@ -121,10 +119,10 @@
       <screen x="1280" y="23" width="1920" height="1057" />
     </state>
     <state x="2235" y="87" width="802" height="758" key="dock-window-2/1280.23.1920.1057/0.23.1280.777@0.23.1280.777" timestamp="1600371100355" />
-    <state x="-493" y="-1344" width="1172" height="1341" key="find.popup" timestamp="1600883275107">
+    <state x="-493" y="-1344" width="1172" height="1341" key="find.popup" timestamp="1600959458666">
       <screen x="-731" y="-1417" width="2560" height="1417" />
     </state>
-    <state x="-493" y="-1344" width="1172" height="1341" key="find.popup/-731.-1417.2560.1417/0.23.1280.777@-731.-1417.2560.1417" timestamp="1600883275107" />
+    <state x="-493" y="-1344" width="1172" height="1341" key="find.popup/-731.-1417.2560.1417/0.23.1280.777@-731.-1417.2560.1417" timestamp="1600959458666" />
     <state x="119" y="63" width="586" height="735" key="find.popup/0.23.1280.777@0.23.1280.777" timestamp="1600694654006" />
     <state x="467" y="208" key="refactoring.ChangeSignatureDialog" timestamp="1600695633008">
       <screen x="0" y="23" width="1280" height="777" />

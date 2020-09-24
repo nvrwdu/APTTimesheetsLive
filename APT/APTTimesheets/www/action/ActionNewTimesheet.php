@@ -7,13 +7,13 @@ namespace Phppot;
 
 require_once "../class/Timesheet.php";
 
-print_r($_POST);
+//print_r($_POST);
 
 $ts = new Timesheet();
 $ts->setTimesheetValuesByAssocArray($_POST);
 
 echo 'printing values:';
-print_r($ts->timesheetProperties);
+//print_r($ts->timesheetProperties);
 $ts->saveTimesheet();
 
 echo "Here we are, in action new timesheet";
