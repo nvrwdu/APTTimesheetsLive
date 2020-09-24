@@ -16,7 +16,7 @@ echo 'printing values:';
 //print_r($ts->timesheetProperties);
 $ts->saveTimesheet();
 
-echo "Here we are, in action new timesheet";
+
 
 Header('Location: ../view/views/ViewTimesheetsSummary.php');
 ?> 

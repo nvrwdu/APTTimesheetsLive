@@ -197,10 +197,11 @@ class Timesheet
 
         //$syntheticQuantity = $this->timesheetProperties['plannedsynthetic'][1];
 
-        // dispatch email to submitter
-        $email = "nvrwdu@hotmail.com";
-        $this->sendMailTo($email);
-        $this->sendMailTo($email, true);
+        $adminEmail = 'nvrwdu@hotmail.com';
+
+        //dispatch email to submitter and admin
+        $this->sendMailTo($_SESSION["userEmail"]);
+        $this->sendMailTo($adminEmail, true);
 
     }
 
