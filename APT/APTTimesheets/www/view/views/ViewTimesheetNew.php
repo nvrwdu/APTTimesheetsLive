@@ -51,12 +51,15 @@ if ($_GET['action'] == 'newtimesheet') {
 <head>
 
     <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/APT/APTTimesheets/www/view/elements/ElementHeadTagElements.php'; ?>
+
 <head/>
 
 <body>
     <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/APT/APTTimesheets/www/view/elements/ElementMainMenu.php'; ?>
     <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/APT/APTTimesheets/www/view/elements/ElementNewTimesheetForm.php'; ?>
 </body>
+
+    <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/APT/APTTimesheets/www/view/elements/ElementFooter.html'; ?>
 
 </html>
 

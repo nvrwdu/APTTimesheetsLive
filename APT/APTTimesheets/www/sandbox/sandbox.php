@@ -7,16 +7,16 @@ if (session_status() == PHP_SESSION_NONE) {
 ?>
 
 <?php
-$xml =
-    "<select>
-<option>Telent</option>
-<option>KNN</option>
-<option>Virgin</option>
-</select>";
-
-
-
-$contractOptions = simplexml_load_string($xml);
+//$xml =
+//    "<select>
+//<option>Telent</option>
+//<option>KNN</option>
+//<option>Virgin</option>
+//</select>";
+//
+//
+//
+//$contractOptions = simplexml_load_string($xml);
 //print_r($contractOptions);
 
 
@@ -27,19 +27,19 @@ $contractOptions = simplexml_load_string($xml);
 
 //print_r($contractOptions->option);
 
-$timesheetContract = 'KNN';
-
-$optionValues = $contractOptions->option;
-
-
-for ($i=0 ; $i < count($optionValues) ; $i++) {
-    if ($optionValues[$i] == $timesheetContract) {
-        echo 'found at index: ' . $i;
-        $contractOptions->option[$i]->addAttribute('selected', '');
-    }
-}
-
-echo $contractOptions->asXML();
+//$timesheetContract = 'KNN';
+//
+//$optionValues = $contractOptions->option;
+//
+//
+//for ($i=0 ; $i < count($optionValues) ; $i++) {
+//    if ($optionValues[$i] == $timesheetContract) {
+//        echo 'found at index: ' . $i;
+//        $contractOptions->option[$i]->addAttribute('selected', '');
+//    }
+//}
+//
+//echo $contractOptions->asXML();
 
 ?>
 

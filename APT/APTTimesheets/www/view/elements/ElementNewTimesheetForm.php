@@ -85,9 +85,16 @@
 
 
             ?>
-            Synthetic <input type="text" name="plannedsynthetic[1]['plannedsynthetic']" value="<?php echo $plannedSynthetics[0][0]; ?>">
-            Quantity <input type="text" name="plannedsynthetic[1]['quantity']" value="<?php echo $plannedSynthetics[0][1]; ?>"><br>
+
+            <div id="planned-synthetics-container">
+                Synthetic <input type="text" name="plannedsynthetic[1]['plannedsynthetic']" value="<?php echo $plannedSynthetics[0][0]; ?>">
+                Quantity <input type="text" name="plannedsynthetic[1]['quantity']" value="<?php echo $plannedSynthetics[0][1]; ?>"><br>
+
+            </div>
+
             <button type="button" class="pure-button" id="btn-add-new-planned-synthetic">Add</button>
+
+
 
 
 
@@ -100,11 +107,14 @@
 
             <b>DfE's / Unplanned work</b><br><br>
 
+            <div id="unplanned-synthetics-container">
             Synthetic <input type="text" name="unplannedsynthetic[1]['unplannedsynthetic']" value="<?php echo $unplannedSynthetics[0][0]; ?>">
             Quantity <input type="text" name="unplannedsynthetic[1]['quantity']" value="<?php echo $unplannedSynthetics[0][1]; ?>">
             <textarea id="textarea-unplanned-work-comments-box" name="unplannedsynthetic[1]['comments']" placeholder="Comments"><?php echo $unplannedSynthetics[0][2]; ?></textarea>
             <br>
-            <button type="button" class="pure-button" id="btn-add-new-planned-synthetic">Add</button>
+
+            </div>
+            <button type="button" class="pure-button" id="btn-add-new-unplanned-synthetic">Add</button>
 
 
             <br><br><br><br>
