@@ -131,7 +131,7 @@
                 // If 'rejected status, render, 'amend' button
 
                 // Current timesheet status from $_GET
-                //echo $timesheetStatus = $singleTimesheet[0]['Status'];
+                $timesheetStatus = $singleTimesheet[0]['Status'];
 
                 switch ($timesheetStatus) {
                     case 'pending':

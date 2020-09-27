@@ -170,27 +170,29 @@ class Timesheet
         /*
          * Save planned synthetic
          */
-        $syntheticName = $this->timesheetProperties['plannedsynthetic'][1]["'plannedsynthetic'"];
-        $syntheticQuantity = $this->timesheetProperties['plannedsynthetic'][1]["'quantity'"];
-
-        $query = "INSERT INTO Synthetics (TimesheetID, Name, Quantity, syntheticType)
-          VALUES (?, ?, ?, ?)";
-        $paramType = "isis";
-        $paramArray = array($currentTimesheetID, $syntheticName, $syntheticQuantity, 'planned');
-        $memberResult = $this->ds->insert($query, $paramType, $paramArray);
+//        $syntheticName = $this->timesheetProperties['plannedsynthetic'][1]["'plannedsynthetic'"];
+//        $syntheticQuantity = $this->timesheetProperties['plannedsynthetic'][1]["'quantity'"];
+//
+//        $query = "INSERT INTO Synthetics (TimesheetID, Name, Quantity, syntheticType)
+//          VALUES (?, ?, ?, ?)";
+//        $paramType = "isis";
+//        $paramArray = array($currentTimesheetID, $syntheticName, $syntheticQuantity, 'planned');
+//        $memberResult = $this->ds->insert($query, $paramType, $paramArray);
+        $this->savePlannedSynthetics($currentTimesheetID);
 
         /*
          * Save unplanned synthetic
          *
          */
-        $syntheticName = $this->timesheetProperties['unplannedsynthetic'][1]["'unplannedsynthetic'"];
-        $syntheticQuantity = $this->timesheetProperties['unplannedsynthetic'][1]["'quantity'"];
-
-        $query = "INSERT INTO Synthetics (TimesheetID, Name, Quantity, syntheticType)
-          VALUES (?, ?, ?, ?)";
-        $paramType = "isis";
-        $paramArray = array($currentTimesheetID, $syntheticName, $syntheticQuantity, 'unplanned');
-        $memberResult = $this->ds->insert($query, $paramType, $paramArray);
+//        $syntheticName = $this->timesheetProperties['unplannedsynthetic'][1]["'unplannedsynthetic'"];
+//        $syntheticQuantity = $this->timesheetProperties['unplannedsynthetic'][1]["'quantity'"];
+//
+//        $query = "INSERT INTO Synthetics (TimesheetID, Name, Quantity, syntheticType)
+//          VALUES (?, ?, ?, ?)";
+//        $paramType = "isis";
+//        $paramArray = array($currentTimesheetID, $syntheticName, $syntheticQuantity, 'unplanned');
+//        $memberResult = $this->ds->insert($query, $paramType, $paramArray);
+        $this->saveUnplannedSynthetics($currentTimesheetID);
 
 
 
@@ -204,6 +206,51 @@ class Timesheet
         $this->sendMailTo($adminEmail, true);
 
     }
+
+    private function savePlannedSynthetics($currentTimesheetID) {
+        //echo 'printing values:';
+        //print_r($this->timesheetProperties['plannedsynthetic'][2]);
+
+//        $syntheticName = $this->timesheetProperties['plannedsynthetic'][1]["'plannedsynthetic'"];
+//        $syntheticQuantity = $this->timesheetProperties['plannedsynthetic'][1]["'quantity'"];
+
+        foreach ($this->timesheetProperties['plannedsynthetic'] as $plannedSynthetic) {
+            $syntheticName = $plannedSynthetic["'plannedsynthetic'"];
+            $syntheticQuantity = $plannedSynthetic["'quantity'"];
+
+            $query = "INSERT INTO Synthetics (TimesheetID, Name, Quantity, syntheticType)
+          VALUES (?, ?, ?, ?)";
+            $paramType = "isis";
+            $paramArray = array($currentTimesheetID, $syntheticName, $syntheticQuantity, 'planned');
+            $memberResult = $this->ds->insert($query, $paramType, $paramArray);
+        }
+    }
+
+    private function saveUnplannedSynthetics($currentTimesheetID) {
+        //print_r($ts->timesheetProperties['unplannedsynthetic']);
+
+//        foreach ($ts->timesheetProperties['unplannedsynthetic'] as $unplannedSynthetic) {
+//            print_r($unplannedSynthetic["'unplannedsynthetic'"]);
+//            print_r($unplannedSynthetic["'quantity'"]);
+//            print_r($unplannedSynthetic["'comments'"]);
+//
+//        }
+
+        foreach ($this->timesheetProperties['unplannedsynthetic'] as $unplannedSynthetic) {
+            $syntheticName = $unplannedSynthetic["'unplannedsynthetic'"];
+            $syntheticQuantity = $unplannedSynthetic["'quantity'"];
+            $syntheticComments = $unplannedSynthetic["'comments'"];
+
+
+            $query = "INSERT INTO Synthetics (TimesheetID, Name, Quantity, syntheticType, Comments)
+          VALUES (?, ?, ?, ?, ?)";
+            $paramType = "isiss";
+            $paramArray = array($currentTimesheetID, $syntheticName, $syntheticQuantity, 'unplanned', $syntheticComments);
+            $memberResult = $this->ds->insert($query, $paramType, $paramArray);
+        }
+    }
+
+
 
 
 

@@ -12,11 +12,18 @@ require_once "../class/Timesheet.php";
 $ts = new Timesheet();
 $ts->setTimesheetValuesByAssocArray($_POST);
 
-echo 'printing values:';
-//print_r($ts->timesheetProperties);
+//echo 'printing values:';
+print_r($ts->timesheetProperties['unplannedsynthetic']);
+
+foreach ($ts->timesheetProperties['unplannedsynthetic'] as $unplannedSynthetic) {
+    print_r($unplannedSynthetic["'unplannedsynthetic'"]);
+    print_r($unplannedSynthetic["'quantity'"]);
+    print_r($unplannedSynthetic["'comments'"]);
+}
+
 $ts->saveTimesheet();
-
-
-
+//
+//
+//
 Header('Location: ../view/views/ViewTimesheetsSummary.php');
 ?> 

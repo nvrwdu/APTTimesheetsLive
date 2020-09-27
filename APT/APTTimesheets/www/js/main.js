@@ -23,7 +23,7 @@ document.getElementById('btn-add-new-unplanned-synthetic').onclick = function ()
     let template = `
             Synthetic <input type="text" name="unplannedsynthetic[${i}]['unplannedsynthetic']">
             Quantity <input type="text" name="unplannedsynthetic[${i}]['quantity']">
-            <textarea id="textarea-unplanned-work-comments-box" name="unplannedsynthetic[${i-1}]['comments']"></textarea>
+            <textarea id="textarea-unplanned-work-comments-box" name="unplannedsynthetic[${i}]['comments']" placeholder="Comments"></textarea>
             <br>
     `;
 
