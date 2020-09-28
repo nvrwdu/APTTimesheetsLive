@@ -37,13 +37,24 @@ use \Phppot\Member;
 <script src="../js/timesheetApp.js"></script>
 
 <?php
-// Get timesheets data for user
-$timesheetData = new Timesheet();
-$timesheetData = $timesheetData->getTimesheetsByUserId($_SESSION['userId']);
+    // Get timesheet data for user
+    $timesheetData = new Timesheet();
 
-// Pass timesheets data to timesheet renderer
-$timesheetSummaryRenderView = new \Phppot\TimesheetSummaryRenderView($timesheetData);
-$timesheetSummaryRenderView->render();
+    switch ($_SESSION['userType']) {
+        case 'submitter' :
+            $timesheetData = $timesheetData->getTimesheetsByUserId($_SESSION['userId']);
+            break;
+        case 'admin' :
+            $timesheetData = $timesheetData->getAssociatedUsersTimesheets($_SESSION['userId']);
+            break;
+        default :
+            echo 'user is neither a submitter, nor admin.' . __FILE__;
+
+    }
+    
+    // Pass timesheet data to renderer
+    $timesheetSummaryRenderView = new TimesheetSummaryRenderView($timesheetData);
+    $timesheetSummaryRenderView->render();
 ?>
 
 </html>

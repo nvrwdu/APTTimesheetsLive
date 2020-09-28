@@ -9,7 +9,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/APT/APTTimesheets/www/class/Timesheet
 
 class TimesheetSummaryRenderView {
 
-    private $timesheets; // Holds all timesheet data
+    public $timesheets; // Holds all timesheet data
 
     public function __construct($timesheets) {
         $this->timesheets = $timesheets; // Hold timesheet data
@@ -25,32 +25,23 @@ class TimesheetSummaryRenderView {
 
         switch ($_SESSION["userType"]) {
             case 'submitter':
-                // Render for submitter
-                // get data for all submitters timesheets ($results)
-//                $userTimesheets = new Timesheet();
-//                $timesheets = $userTimesheets->getTimesheetsByUserId($_SESSION["userId"]);
-//                $this->renderTimesheetTableSummary($timesheets);
-                //echo "render for submitter";
+                //echo "Timesheet summary page for submitters";
                 $this->renderSubmitterTimesheetTableSummary($this->timesheets);
                 break;
-            case 'admin' :
-                //$this->viewToRender .= "This is the view for user type admin";
-                //echo "this is the page for admin users";
-                $adminsTimesheets = new Timesheet();
-                $adminsTimesheetsResult = $adminsTimesheets->getAssociatedUsersTimesheets($_SESSION['userId']);
 
-                // Create renderAdminTimesheetTableSummary method to render table for Admins
-                // Which includes the option to amend timesheet status.
-                $this->renderSubmitterTimesheetTableSummary($adminsTimesheetsResult);
+            case 'admin' :
+                //echo "Timesheet summary page for admins";
+                $this->renderSubmitterTimesheetTableSummary($this->timesheets);
                 break;
+
             case 'superadmin' :
+                echo 'page for super admin';
                 // Add view to viewToRender for admin
                 //$this->viewToRender .= "This is the view for user type superadmin";
 
+            default:
+                echo 'neither submitter, nor admin, nor superadmin';
         }
-
-
-
     }
 
     /*
