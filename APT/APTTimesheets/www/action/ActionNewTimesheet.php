@@ -23,9 +23,9 @@ print_r($ts->timesheetProperties['comments']);
 //    print_r($unplannedSynthetic["'comments'"]);
 //}
 
-//$ts->saveTimesheet();
+$ts->saveTimesheet();
 //
 //
 //
-//Header('Location: ../view/views/ViewTimesheetsSummary.php');
+Header('Location: ../view/views/ViewTimesheetsSummary.php');
 ?> 
