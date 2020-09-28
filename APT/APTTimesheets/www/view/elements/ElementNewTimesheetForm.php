@@ -80,40 +80,39 @@
                 //print_r($plannedSynthetics[0]);
                 //print_r($unplannedSynthetics[0]);
 
-                // Now loop over planned and unplanned synthetics, creating html dynamically.
-
+                // Loop over planned and unplanned synthetics, creating html dynamically.
+                for ($i=0 ; $i<count($plannedSynthetics) ; $i++) {
+                    echo '<div id="planned-synthetics-container">
+                        Synthetic <input type="text" name="plannedsynthetic['. $i .']["plannedsynthetic"]" value="' . $plannedSynthetics[$i][0] . '">
+                        Quantity <input type="text" name="plannedsynthetic['. $i .']["quantity"]" value="' . $plannedSynthetics[$i][1] . '"><br>
+                    </div>';
+                }
 
 
             ?>
 
-            <div id="planned-synthetics-container">
-                Synthetic <input type="text" name="plannedsynthetic[1]['plannedsynthetic']" value="<?php echo $plannedSynthetics[0][0]; ?>">
-                Quantity <input type="text" name="plannedsynthetic[1]['quantity']" value="<?php echo $plannedSynthetics[0][1]; ?>"><br>
-
-            </div>
 
             <button type="button" class="pure-button" id="btn-add-new-planned-synthetic">Add</button>
 
-
-
-
-
-
             <br><br><br><br>
-
-
-
-
 
             <b>DfE's / Unplanned work</b><br><br>
 
-            <div id="unplanned-synthetics-container">
-            Synthetic <input type="text" name="unplannedsynthetic[1]['unplannedsynthetic']" value="<?php echo $unplannedSynthetics[0][0]; ?>">
-            Quantity <input type="text" name="unplannedsynthetic[1]['quantity']" value="<?php echo $unplannedSynthetics[0][1]; ?>">
-            <textarea id="textarea-unplanned-work-comments-box" name="unplannedsynthetic[1]['comments']" placeholder="Comments"><?php echo $unplannedSynthetics[0][2]; ?></textarea>
-            <br>
+            <?php
 
-            </div>
+            // $unplannedSynthetics initialised when rendering plannedSynthetics.
+            for ($i=0 ; $i<count($unplannedSynthetics) ; $i++) {
+                echo '<div id="planned-synthetics-container">
+                        Synthetic <input type="text" name="unplannedsynthetic['. $i .']["plannedsynthetic"]" value="' . $unplannedSynthetics[$i][0] . '">
+                        Quantity <input type="text" name="unplannedsynthetic['. $i .']["quantity"]" value="' . $unplannedSynthetics[$i][1] . '"><br>
+                        <textarea id="textarea-unplanned-work-comments-box" name="unplannedsynthetic['. $i .']["comments"]" placeholder="Comments">' . $unplannedSynthetics[$i][2] . '</textarea>
+            <br>
+                    </div>';
+            }
+
+            ?>
+
+
             <button type="button" class="pure-button" id="btn-add-new-unplanned-synthetic">Add</button>
 
 

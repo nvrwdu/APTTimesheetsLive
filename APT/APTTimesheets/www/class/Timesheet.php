@@ -64,7 +64,7 @@ class Timesheet
 
     public function getPlannedSynthetics($timesheetResult, $syntheticType) {
 
-        $plannedSynthetics = array();
+        $synthetics = array();
 
         foreach ($timesheetResult as $timesheetData) {
             foreach ($timesheetData as $key => $value) {
@@ -72,17 +72,18 @@ class Timesheet
 
                     switch ($syntheticType) {
                         case 'planned':
-                            $plannedSynthetics[] = array($timesheetData['Name'], $timesheetData['Quantity']);
+                            $synthetics[] = array($timesheetData['Name'], $timesheetData['Quantity']);
                             break;
                         case 'unplanned':
-                            $plannedSynthetics[] = array($timesheetData['Name'], $timesheetData['Quantity'], 'comment for unplanned');
+                            //$synthetics[] = array($timesheetData['Name'], $timesheetData['Quantity'], 'comment for unplanned');
+                            $synthetics[] = array($timesheetData['Name'], $timesheetData['Quantity'], $timesheetData['Comments']);
                             break;
                     }
 
                 }
             }
         }
-        return $plannedSynthetics;
+        return $synthetics;
     }
 
 
