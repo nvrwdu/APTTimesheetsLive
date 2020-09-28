@@ -19,8 +19,9 @@ require_once "../class/Timesheet.php";
 $timesheet = new Timesheet();
 $singleTimesheet = $timesheet->getTimesheetById($_GET['timesheetId']);
 
-//print_r($singleTimesheet);
 
+
+print_r($singleTimesheet);
 
 // Getting planned synthetics from timesheet
     //$plannedSynthetics = $timesheet->getPlannedSynthetics($singleTimesheet);
@@ -43,7 +44,7 @@ $singleTimesheet = $timesheet->getTimesheetById($_GET['timesheetId']);
 
 $_SESSION['singleTimesheet'] = $singleTimesheet;
 
-Header('Location: ../view/views/ViewTimesheetNew.php');
+//Header('Location: ../view/views/ViewTimesheetNew.php');
 
 
 

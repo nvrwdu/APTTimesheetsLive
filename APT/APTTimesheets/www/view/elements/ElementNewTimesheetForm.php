@@ -47,7 +47,7 @@
 
                     for ($i=0 ; $i < count($optionValues) ; $i++) {
                         if ($optionValues[$i] == $timesheetContract) {
-                            echo 'found at index: ' . $i;
+                            //echo 'found at index: ' . $i;
                             $contractOptions->option[$i]->addAttribute('selected', '');
                         }
                     }
