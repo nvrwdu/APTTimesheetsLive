@@ -35,11 +35,14 @@ class TimesheetSummaryRenderView {
                 break;
             case 'admin' :
                 //$this->viewToRender .= "This is the view for user type admin";
-                echo "this is the page for admin users";
-//                $userTimesheets = new Timesheet();
-//                $timesheets = $userTimesheets->getTimesheetsByUserId($_SESSION["userId"]);
-//                $this->renderTimesheetTableSummary($timesheets);
-//                break;
+                //echo "this is the page for admin users";
+                $adminsTimesheets = new Timesheet();
+                $adminsTimesheetsResult = $adminsTimesheets->getAssociatedUsersTimesheets($_SESSION['userId']);
+
+                // Create renderAdminTimesheetTableSummary method to render table for Admins
+                // Which includes the option to amend timesheet status.
+                $this->renderSubmitterTimesheetTableSummary($adminsTimesheetsResult);
+                break;
             case 'superadmin' :
                 // Add view to viewToRender for admin
                 //$this->viewToRender .= "This is the view for user type superadmin";
