@@ -202,9 +202,16 @@ class Timesheet
 
         $adminEmail = 'nvrwdu@hotmail.com';
 
-        //dispatch email to submitter and admin
-        $this->sendMailTo($_SESSION["userEmail"]);
-        $this->sendMailTo($adminEmail, true);
+        //dispatch email to submitter
+        $this->sendMailTo($_SESSION["userEmail"],
+            'APT',
+            'You\'ve submitted a new timesheet',
+            'Once reviewed, you\'ll receive a email update'
+        );
+
+
+        //dispatch email to admin
+        $this->sendMailTo($adminEmail, 'APT', 'New timesheet submitted', 'Please check account to check timesheet');
 
     }
 
@@ -260,7 +267,7 @@ class Timesheet
     /*
      * Send mail to submitter
      */
-    private function sendMailTo($email, $isAdmin = false)
+    public function sendMailTo($email, $name, $subject = '', $body = '')
     {
         /* Dispatch email with timesheet data */
 
@@ -288,15 +295,15 @@ class Timesheet
 
         $mail->isHTML(true);
 
-        $mail->Subject = "New timesheet submitted";
+        $mail->Subject = $subject;
         //$mail->addEmbeddedImage('path/to/image_file.jpg', 'image_cid');
 
         // Mail template. Different if user is admin
-        if($isAdmin) {
-            $mailTemplate = "<b>Admin, a new timesheet has been submitted. Please check inbox</b>";
-        } else {
-            $mailTemplate = "<b>Thank you for submitting your timesheet. You will be notified of any status updates.";
-        }
+//        if($isAdmin) {
+//            $mailTemplate = "<b>Admin, a new timesheet has been submitted. Please check inbox</b>";
+//        } else {
+//            $mailTemplate = "<b>Thank you for submitting your timesheet. You will be notified of any status updates.";
+//        }
 
                 //<b><br><br><br><br>
 //        $name<br>
@@ -307,7 +314,7 @@ class Timesheet
 //        $email<br>
 
         // $mail->Body = '<b>Mail body in HTML. Message sent successfully<b>';
-        $mail->Body = $mailTemplate;
+        $mail->Body = $body;
         $mail->AltBody = 'This is the plain text version of the email content';
 
         if(!$mail->send()){
@@ -372,3 +379,8 @@ class Timesheet
 //    echo '<br><b>' . $key . '</b>';
 //    echo $value . '<br>';
 //}
+
+//$timesheet = new Timesheet();
+//$timesheet->sendMailTo('nvrwdu@hotmail.com', 'APT', 'New timesheet submitted',
+//    'Thank you submitter, for new timesheet');
+
