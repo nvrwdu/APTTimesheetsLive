@@ -35,7 +35,7 @@ class TimesheetSummaryRenderView {
                 break;
             case 'admin' :
                 //$this->viewToRender .= "This is the view for user type admin";
-                //echo "this is the page for admin users";
+                echo "this is the page for admin users";
 //                $userTimesheets = new Timesheet();
 //                $timesheets = $userTimesheets->getTimesheetsByUserId($_SESSION["userId"]);
 //                $this->renderTimesheetTableSummary($timesheets);

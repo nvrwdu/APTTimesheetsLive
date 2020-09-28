@@ -62,6 +62,21 @@ class Timesheet
 
     }
 
+    public function getAssociatedUsersTimesheets($adminUserId) {
+        // return timesheets by user id.
+
+        //$query = "SELECT * FROM Timesheets WHERE supervisorId = ?";
+
+        //$query = "SELECT * FROM Timesheets WHERE";
+        $query = "SELECT * FROM Timesheets LEFT JOIN registered_users ON Timesheets.UserId = registered_users.id WHERE registered_users.supervisorId=?";
+        $paramType = "i";
+        $paramArray = Array($adminUserId);
+
+        $timesheetsResult = $this->ds->select($query, $paramType, $paramArray);
+
+        return $timesheetsResult;
+    }
+
     public function getPlannedSynthetics($timesheetResult, $syntheticType) {
 
         $synthetics = array();
@@ -144,6 +159,8 @@ class Timesheet
         $this->timesheetStatus = $newStatus;
     }
 
+
+
     public function saveTimesheet()
     {
         /* Save timesheet data */
@@ -210,8 +227,12 @@ class Timesheet
         );
 
 
-        //dispatch email to admin
-        $this->sendMailTo($adminEmail, 'APT', 'New timesheet submitted', 'Please check account to check timesheet');
+        //dispatch email to submitters admin
+        $this->sendMailTo($adminEmail,
+            'APT',
+            'New timesheet submitted',
+            'Please check account to check timesheet'
+        );
 
     }
 
@@ -259,6 +280,50 @@ class Timesheet
     }
 
 
+    public function timesheetRejected($timesheetId) {
+
+        /*
+         * Send message to timesheet submitter, their timesheet has been rejected
+         *
+         * Check if current user is admin
+         * Change timesheet status to rejected
+         * Send email to timesheets submitter, with reason for rejection
+         */
+
+        if ($_SESSION["userType"] = 'admin' or $_SESSION["userType"] = 'superadmin') {
+
+            // Update timesheet status to rejected
+            $query = "UPDATE Timesheets SET Status = 'rejected'
+                        WHERE TimesheetID = ?";
+            $paramType = "i";
+            $paramArray = array($timesheetId);
+            echo $timesheetStatusResult = $this->ds->insert($query, $paramType, $paramArray);
+
+            // Get timesheet submitter email address
+            $query = "SELECT Timesheets.TimesheetID, registered_users.email
+                        FROM Timesheets
+                        INNER JOIN registered_users ON Timesheets.userId = registered_users.id
+                        WHERE Timesheets.TimesheetID = ?";
+            $paramType = "i";
+            $paramArray = array($timesheetId);
+            $timesheetEmailResult = $this->ds->select($query, $paramType, $paramArray);
+            $emailOfSubmitter = $timesheetEmailResult[0]['email']; // Holds email of timesheet submitter
+
+            // Send email to the timesheets submitter
+            $this->sendMailTo($emailOfSubmitter,
+                'APT Gang Member',
+                'Timesheet rejected',
+                'A timesheet you\'ve submitted has been rejected. Please login to view and amend.'
+            );
+
+
+        } else {
+            echo "Wrong user type. Cannot perform rejection amendment";
+        }
+
+    }
+
+
 
 
 
@@ -289,7 +354,6 @@ class Timesheet
         $mail->From = "nvrwdu@hotmail.com";
         $mail->FromName = "Mohammed Amir";
 
-        $name = "test";
         $mail->AddAddress("$email", "$name");
 
 
@@ -384,3 +448,7 @@ class Timesheet
 //$timesheet->sendMailTo('nvrwdu@hotmail.com', 'APT', 'New timesheet submitted',
 //    'Thank you submitter, for new timesheet');
 
+// Test getting all associated timesheets for the currently logged in user
+//$timesheet = new Timesheet();
+//$timesheet->timesheetRejected(71);
+//print_r($timesheet->getAssociatedUsersTimesheets(1));
