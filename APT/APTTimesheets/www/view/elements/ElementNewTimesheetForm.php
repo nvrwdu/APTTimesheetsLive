@@ -70,26 +70,30 @@
 
 
             <b>Planned work</b><br><br>
-            <?php
-                require_once "../../class/Timesheet.php";
 
-                // Get planned synthetic data
-                $timesheet = new \Phppot\Timesheet();
-                $plannedSynthetics = $timesheet->getPlannedSynthetics($singleTimesheet, 'planned');
-                $unplannedSynthetics = $timesheet->getPlannedSynthetics($singleTimesheet, 'unplanned');
-                //print_r($plannedSynthetics[0]);
-                //print_r($unplannedSynthetics[0]);
+            <div id="planned-synthetics-container">
 
-                // Loop over planned and unplanned synthetics, creating html dynamically.
-                for ($i=0 ; $i<count($plannedSynthetics) ; $i++) {
-                    echo '<div id="planned-synthetics-container">
-                        Synthetic <input type="text" name="plannedsynthetic['. $i .']["plannedsynthetic"]" value="' . $plannedSynthetics[$i][0] . '">
-                        Quantity <input type="text" name="plannedsynthetic['. $i .']["quantity"]" value="' . $plannedSynthetics[$i][1] . '"><br>
-                    </div>';
-                }
+                <?php
+                    require_once "../../class/Timesheet.php";
+
+                    // Get planned synthetic data
+                    $timesheet = new \Phppot\Timesheet();
+                    $plannedSynthetics = $timesheet->getPlannedSynthetics($singleTimesheet, 'planned');
+                    $unplannedSynthetics = $timesheet->getPlannedSynthetics($singleTimesheet, 'unplanned');
+                    //print_r($plannedSynthetics[0]);
+                    //print_r($unplannedSynthetics[0]);
+
+                    // Loop over planned and unplanned synthetics, creating html dynamically.
+                    for ($i=0 ; $i<count($plannedSynthetics) ; $i++) {
+                        echo '
+                            Synthetic <input type="text" name="plannedsynthetic['. $i .']["plannedsynthetic"]" value="' . $plannedSynthetics[$i][0] . '">
+                            Quantity <input type="text" name="plannedsynthetic['. $i .']["quantity"]" value="' . $plannedSynthetics[$i][1] . '"><br>
+                        ';
+                    }
 
 
-            ?>
+                ?>
+            </div>
 
 
             <button type="button" class="pure-button" id="btn-add-new-planned-synthetic">Add</button>
@@ -98,19 +102,23 @@
 
             <b>DfE's / Unplanned work</b><br><br>
 
-            <?php
 
-            // $unplannedSynthetics initialised when rendering plannedSynthetics.
-            for ($i=0 ; $i<count($unplannedSynthetics) ; $i++) {
-                echo '<div id="planned-synthetics-container">
-                        Synthetic <input type="text" name="unplannedsynthetic['. $i .']["plannedsynthetic"]" value="' . $unplannedSynthetics[$i][0] . '">
-                        Quantity <input type="text" name="unplannedsynthetic['. $i .']["quantity"]" value="' . $unplannedSynthetics[$i][1] . '"><br>
-                        <textarea id="textarea-unplanned-work-comments-box" name="unplannedsynthetic['. $i .']["comments"]" placeholder="Comments">' . $unplannedSynthetics[$i][2] . '</textarea>
-            <br>
-                    </div>';
-            }
+            <div id="unplanned-synthetics-container">
 
-            ?>
+                <?php
+
+                // $unplannedSynthetics initialised when rendering plannedSynthetics.
+                for ($i=0 ; $i<count($unplannedSynthetics) ; $i++) {
+                    echo '
+                            Synthetic <input type="text" name="unplannedsynthetic['. $i .']["plannedsynthetic"]" value="' . $unplannedSynthetics[$i][0] . '">
+                            Quantity <input type="text" name="unplannedsynthetic['. $i .']["quantity"]" value="' . $unplannedSynthetics[$i][1] . '"><br>
+                            <textarea id="textarea-unplanned-work-comments-box" name="unplannedsynthetic['. $i .']["comments"]" placeholder="Comments">' . $unplannedSynthetics[$i][2] . '</textarea>
+                <br>
+                        ';
+                }
+
+                ?>
+            </div>
 
 
             <button type="button" class="pure-button" id="btn-add-new-unplanned-synthetic">Add</button>
