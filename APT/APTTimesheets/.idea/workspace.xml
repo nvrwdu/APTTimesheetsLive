@@ -20,7 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1f5a5864-6e18-4279-a5de-3a7e2cafb29b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/www/view/elements/ElementMainMenu.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/view/elements/ElementMainMenu.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +40,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/www" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -64,6 +65,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -82,6 +84,7 @@
       <updated>1600354933027</updated>
       <workItem from="1600354934928" duration="34788000" />
       <workItem from="1600613319887" duration="87555000" />
+      <workItem from="1601289631736" duration="41000" />
     </task>
     <servers />
   </component>
@@ -110,6 +113,10 @@
     </state>
     <state x="31" y="-1158" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-731.-1417.2560.1417/0.23.1280.777@-731.-1417.2560.1417" timestamp="1600948972431" />
     <state x="381" y="165" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1280.777@0.23.1280.777" timestamp="1600434331479" />
+    <state x="149" y="50" key="SettingsEditor" timestamp="1601289672374">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="149" y="50" key="SettingsEditor/0.23.1280.777@0.23.1280.777" timestamp="1601289672374" />
     <state width="500" height="445" key="SwitcherDM" timestamp="1601235395618">
       <screen x="-731" y="-1417" width="2560" height="1417" />
     </state>
