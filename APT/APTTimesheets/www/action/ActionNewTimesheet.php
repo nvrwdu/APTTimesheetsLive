@@ -11,15 +11,16 @@ if (session_status() == PHP_SESSION_NONE) {
 
 require_once "../class/Timesheet.php";
 
-//print_r($_POST);
+print_r($_POST);
 
 $ts = new Timesheet();
 $ts->setTimesheetValuesByAssocArray($_POST);
 
 //print_r($ts->timesheetProperties['comments']);
 
-echo 'printing values:';
-print_r($ts->timesheetProperties['unplannedsynthetic']);
+//echo 'printing values:';
+
+//print_r($ts->timesheetProperties['unplannedsynthetic']);
 //
 //foreach ($ts->timesheetProperties['unplannedsynthetic'] as $unplannedSynthetic) {
 //    print_r($unplannedSynthetic["'unplannedsynthetic'"]);

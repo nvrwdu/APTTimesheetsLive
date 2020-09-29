@@ -34,7 +34,7 @@ use \Phppot\Member;
 </body>
 
 
-<script src="../js/timesheetApp.js"></script>
+
 
 <?php
     // Get timesheet data for user

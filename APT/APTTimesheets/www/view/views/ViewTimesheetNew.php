@@ -63,5 +63,5 @@ if ($_GET['action'] == 'newtimesheet') {
 
 </html>
 
-<script src="../js/timesheetApp.js"></script>
+
 

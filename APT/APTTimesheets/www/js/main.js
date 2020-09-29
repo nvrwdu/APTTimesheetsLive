@@ -19,11 +19,10 @@ document.getElementById('btn-add-new-planned-synthetic').onclick = function () {
 
 let j = 2;
 document.getElementById('btn-add-new-unplanned-synthetic').onclick = function () {
-
     let template = `
-            Synthetic <input type="text" name="unplannedsynthetic[${i}]['unplannedsynthetic']">
-            Quantity <input type="text" name="unplannedsynthetic[${i}]['quantity']">
-            <textarea id="textarea-unplanned-work-comments-box" name="unplannedsynthetic[${i}]['comments']" placeholder="Comments"></textarea>
+            Synthetic <input type="text" name="unplannedsynthetic[${j}]['unplannedsynthetic']">
+            Quantity <input type="text" name="unplannedsynthetic[${j}]['quantity']">
+            <textarea id="textarea-unplanned-work-comments-box" name="unplannedsynthetic[${j}]['comments']" placeholder="Comments"></textarea>
             <br>
     `;
 
