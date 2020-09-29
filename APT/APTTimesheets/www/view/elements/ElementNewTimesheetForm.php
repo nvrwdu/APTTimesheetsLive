@@ -81,7 +81,7 @@
                     $plannedSynthetics = $timesheet->getPlannedSynthetics($singleTimesheet, 'planned');
                     $unplannedSynthetics = $timesheet->getPlannedSynthetics($singleTimesheet, 'unplanned');
                     //print_r($plannedSynthetics[0]);
-                    echo count($unplannedSynthetics);
+                    //echo count($unplannedSynthetics);
                     // Loop over planned and unplanned synthetics, creating html dynamically.
                     for ($i=0 ; $i<count($plannedSynthetics) ; $i++) {
                         echo '
