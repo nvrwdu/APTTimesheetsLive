@@ -44,7 +44,7 @@ use \Phppot\Member;
     switch ($_SESSION['userType']) {
         case 'submitter' :
             $timesheetData = $timesheetData->getTimesheetsByUserId($_SESSION['userId']);
-            print_r($timesheetData);
+            //print_r($timesheetData);
             //Pass timesheet data to renderer
             $timesheetSummaryRenderView = new TimesheetSummaryRenderView($timesheetData);
             $timesheetSummaryRenderView->render();

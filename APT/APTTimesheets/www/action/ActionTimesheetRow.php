@@ -47,7 +47,7 @@ $singleTimesheet = $timesheet->getTimesheetById($_GET['timesheetId']);
 $_SESSION['singleTimesheet'] = $singleTimesheet;
 
 //echo '<br>from SESSION:<br>';
-print_r($_SESSION['singleTimesheet']);
+//print_r($_SESSION['singleTimesheet']);
 
 Header('Location: ../view/views/ViewTimesheetNew.php');
 

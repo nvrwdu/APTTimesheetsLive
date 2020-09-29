@@ -11,7 +11,7 @@ if (session_status() == PHP_SESSION_NONE) {
 
 require_once "../class/Timesheet.php";
 
-print_r($_POST);
+//print_r($_POST);
 
 $ts = new Timesheet();
 $ts->setTimesheetValuesByAssocArray($_POST);

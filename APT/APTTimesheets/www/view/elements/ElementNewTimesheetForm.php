@@ -7,7 +7,7 @@
 
         //print_r($_SESSION['singleTimesheet'][0]['Contract']);
         $singleTimesheet = $_SESSION['singleTimesheet'];
-        print_r($singleTimesheet);
+        //print_r($singleTimesheet);
 
         ?>
 
