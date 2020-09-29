@@ -31,8 +31,40 @@ class Timesheet
     {
         // get sql info by $id.
         // create and return new Timesheet object
-        //$query = "select * FROM Timesheets WHERE TimesheetID = ?";
-        $query = "SELECT * FROM Timesheets LEFT JOIN Synthetics ON Timesheets.TimesheetID=Synthetics.TimesheetID WHERE Timesheets.TimesheetId=?";
+        //$query = "select TimesheetID FROM Timesheets WHERE TimesheetID = ?";
+        $query = "SELECT
+            Timesheets.TimesheetID,
+            Timesheets.Date,
+            Timesheets.TimeFrom,
+            Timesheets.TimeTo,
+            Timesheets.Contract,
+            Timesheets.JobNumber,
+            Timesheets.Estimate,
+            Timesheets.Exchange,
+            Timesheets.UserId,
+            Timesheets.Status,
+            Timesheets.Comments,
+            Synthetics.SyntheticID,
+            Synthetics.TimesheetID,
+            Synthetics.Name,
+            Synthetics.Quantity,
+            Synthetics.syntheticType,
+            Synthetics.Comments as syntheticComments
+            FROM Timesheets
+            LEFT JOIN Synthetics
+            ON Timesheets.TimesheetID=Synthetics.TimesheetID
+            WHERE Timesheets.TimesheetId=?";
+//        $query = "SELECT
+//            Timesheets.TimesheetID,
+//            Synthetics.SyntheticID
+//
+//            FROM Timesheets
+//            LEFT JOIN Synthetics
+//            ON Timesheets.TimesheetID=Synthetics.TimesheetID
+//            WHERE Timesheets.TimesheetId=?";
+
+
+        //$query = "SELECT * FROM Timesheets LEFT JOIN Synthetics ON Timesheets.TimesheetID=Synthetics.TimesheetID WHERE Timesheets.TimesheetId=?";
 
 //        SELECT Orders.OrderID, Customers.CustomerName, Orders.OrderDate
 //FROM Orders
@@ -91,7 +123,7 @@ class Timesheet
                             break;
                         case 'unplanned':
                             //$synthetics[] = array($timesheetData['Name'], $timesheetData['Quantity'], 'comment for unplanned');
-                            $synthetics[] = array($timesheetData['Name'], $timesheetData['Quantity'], $timesheetData['Comments']);
+                            $synthetics[] = array($timesheetData['Name'], $timesheetData['Quantity'], $timesheetData['syntheticComments']);
                             break;
                     }
 
@@ -465,3 +497,8 @@ class Timesheet
 //$timesheet = new Timesheet();
 //$timesheet->timesheetRejected(71);
 //print_r($timesheet->getAssociatedUsersTimesheets(1));
+
+// Timesheet comments were not rendering
+//$timesheet = new Timesheet();
+//$timesheetResult = $timesheet->getTimesheetById(92);
+//print_r($timesheetResult);

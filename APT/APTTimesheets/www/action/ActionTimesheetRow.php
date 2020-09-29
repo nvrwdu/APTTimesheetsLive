@@ -1,7 +1,6 @@
 <?php
 namespace Phppot;
 
-use http\Header;
 
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
@@ -12,7 +11,6 @@ require_once "../class/Timesheet.php";
 
 //echo 'this page receives the timesheets row values. From it, renders a single timesheet summary';
 //echo 'timesheetID: ' . $_GET['timesheetId'];
-
 
 
 //Get timesheet to render
@@ -42,12 +40,15 @@ $singleTimesheet = $timesheet->getTimesheetById($_GET['timesheetId']);
 //
 
 
+//echo 'from get:<br>';
+//print_r($singleTimesheet);
+
+
 $_SESSION['singleTimesheet'] = $singleTimesheet;
 
+//echo '<br>from SESSION:<br>';
+//print_r($_SESSION['singleTimesheet']);
+
 Header('Location: ../view/views/ViewTimesheetNew.php');
-
-
-
-
 
 ?>
