@@ -114,8 +114,8 @@ class Timesheet
             array_key_exists('contract', $tsVals) &&
             array_key_exists('jobnumber', $tsVals) &&
             array_key_exists('estimate', $tsVals) &&
-            array_key_exists('exchange', $tsVals) &&
-            array_key_exists('plannedsynthetic', $tsVals)
+            array_key_exists('exchange', $tsVals)
+            //array_key_exists('plannedsynthetic', $tsVals)
             //array_key_exists('unplannedsynthetic', $tsVals)
         ) {
             //echo "All required keys exist.";
@@ -141,6 +141,7 @@ class Timesheet
 
         } else {
             echo "Required keys missing";
+
         }
     }
 
@@ -153,13 +154,6 @@ class Timesheet
                 echo "<b>Value : </b>" . $value;
             }
     }
-
-    public function changeTimesheetStatus(String $newStatus)
-    {
-        $this->timesheetStatus = $newStatus;
-    }
-
-
 
     public function saveTimesheet()
     {
@@ -280,7 +274,7 @@ class Timesheet
     }
 
 
-    public function timesheetRejected($timesheetId) {
+    public function changeTimesheetStatus(int $timesheetId, string $newStatus) {
 
         /*
          * Send message to timesheet submitter, their timesheet has been rejected
@@ -290,11 +284,11 @@ class Timesheet
          * Send email to timesheets submitter, with reason for rejection
          */
 
-        if ($_SESSION["userType"] = 'admin' or $_SESSION["userType"] = 'superadmin') {
+        if ($_SESSION["userType"] == 'submitter' or $_SESSION["userType"] == 'admin' or $_SESSION["userType"] == 'superadmin') {
 
-            // Update timesheet status to rejected
-            $query = "UPDATE Timesheets SET Status = 'rejected'
-                        WHERE TimesheetID = ?";
+            // Update timesheet status
+            $query = "UPDATE Timesheets SET Status = '{$newStatus}' 
+            WHERE TimesheetID = ?";
             $paramType = "i";
             $paramArray = array($timesheetId);
             echo $timesheetStatusResult = $this->ds->insert($query, $paramType, $paramArray);
@@ -310,10 +304,29 @@ class Timesheet
             $emailOfSubmitter = $timesheetEmailResult[0]['email']; // Holds email of timesheet submitter
 
             // Send email to the timesheets submitter
+            // Get message, depending on timesheet status
+            $mailSubject = '';
+            $mailBody = '';
+            switch (lcfirst($newStatus)) {
+                case 'approve' :
+                    $mailSubject = "New timesheet $timesheetId accepted.";
+                    $mailBody = "Timesheet : $timesheetId accepted. Thank you.";
+                    break;
+                case 'reject' :
+                    $mailSubject = "New timesheet $timesheetId rejected.";
+                    $mailBody = "Timesheet : $timesheetId rejected. Please login and amend.";
+                    break;
+                default:
+                    $mailSubject = "Err: Nor accept nor reject";
+                    $mailBody = "Err: Nor accept nor reject";
+
+
+            }
+
             $this->sendMailTo($emailOfSubmitter,
                 'APT Gang Member',
-                'Timesheet rejected',
-                'A timesheet you\'ve submitted has been rejected. Please login to view and amend.'
+                $mailSubject,
+                $mailBody
             );
 
 

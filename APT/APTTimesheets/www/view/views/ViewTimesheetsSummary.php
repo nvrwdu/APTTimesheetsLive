@@ -40,21 +40,28 @@ use \Phppot\Member;
     // Get timesheet data for user
     $timesheetData = new Timesheet();
 
+
     switch ($_SESSION['userType']) {
         case 'submitter' :
             $timesheetData = $timesheetData->getTimesheetsByUserId($_SESSION['userId']);
+
+            //Pass timesheet data to renderer
+            $timesheetSummaryRenderView = new TimesheetSummaryRenderView($timesheetData);
+            $timesheetSummaryRenderView->render();
             break;
         case 'admin' :
             $timesheetData = $timesheetData->getAssociatedUsersTimesheets($_SESSION['userId']);
+
+            // Pass timesheet data to renderer
+            $timesheetSummaryRenderView = new TimesheetSummaryRenderView($timesheetData);
+            $timesheetSummaryRenderView->render();
             break;
         default :
             echo 'user is neither a submitter, nor admin.' . __FILE__;
 
     }
-    
-    // Pass timesheet data to renderer
-    $timesheetSummaryRenderView = new TimesheetSummaryRenderView($timesheetData);
-    $timesheetSummaryRenderView->render();
+
+
 ?>
 
 </html>

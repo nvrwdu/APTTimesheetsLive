@@ -1,6 +1,10 @@
 <?php
 namespace Phppot;
 
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+
 /*
  * Called when user submits a new timesheet.
  */
@@ -14,8 +18,8 @@ $ts->setTimesheetValuesByAssocArray($_POST);
 
 //print_r($ts->timesheetProperties['comments']);
 
-//echo 'printing values:';
-//print_r($ts->timesheetProperties['unplannedsynthetic']);
+echo 'printing values:';
+print_r($ts->timesheetProperties['unplannedsynthetic']);
 //
 //foreach ($ts->timesheetProperties['unplannedsynthetic'] as $unplannedSynthetic) {
 //    print_r($unplannedSynthetic["'unplannedsynthetic'"]);
@@ -24,8 +28,6 @@ $ts->setTimesheetValuesByAssocArray($_POST);
 //}
 
 $ts->saveTimesheet();
-//
-//
 //
 Header('Location: ../view/views/ViewTimesheetsSummary.php');
 ?> 

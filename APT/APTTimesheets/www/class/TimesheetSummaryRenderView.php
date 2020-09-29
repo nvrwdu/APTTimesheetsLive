@@ -31,7 +31,7 @@ class TimesheetSummaryRenderView {
 
             case 'admin' :
                 //echo "Timesheet summary page for admins";
-                $this->renderSubmitterTimesheetTableSummary($this->timesheets);
+                $this->renderAdminTimesheetTableSummary($this->timesheets);
                 break;
 
             case 'superadmin' :
@@ -48,7 +48,7 @@ class TimesheetSummaryRenderView {
      * Takes $timesheets which holds timesheets data.
      * Returns an HTML rendered table with the timesheets data.
      */
-    private function renderSubmitterTimesheetTableSummary($timesheets, $rowActionHandler="") {
+    private function renderAdminTimesheetTableSummary($timesheets) {
 
         $timesheetAttributesUsed = array_keys($timesheets[0]);
         //print_r($timesheetAttributesUsed);
@@ -60,6 +60,7 @@ class TimesheetSummaryRenderView {
             foreach ($timesheetAttributesUsed as $timesheetAttribute) {
                 echo '<th scope="col">' . $timesheetAttribute . '</th>';
             }
+            echo '<th scope="col">Extra</th>';
 
             echo '</tr>
                 </thead>
@@ -69,6 +70,54 @@ class TimesheetSummaryRenderView {
         //Display table contents
         foreach ($timesheets as $timesheet) {
             echo '<tr>';
+            $timesheetId = $timesheet['TimesheetID'];
+
+            foreach ($timesheet as $key => $value) {
+                //print_r($value);
+
+                echo '<td><a href="../../action/ActionTimesheetRow.php?timesheetId=' . $timesheetId . '">' . $value . '</a></td>';
+            }
+            echo '<td>
+                    <form action="../../action/ActionChangeTimesheetStatus.php" method="post" id="frmChangeTimesheetStatus">                        
+                        <select name="newTimesheetStatus">
+                            <option>Approve</option>
+                            <option>Reject</option>
+                        </select>
+                        <input type="submit" name="btnChangeTimesheetStatus" value="Change">
+                        <input type="hidden" name="timesheetId" value="' . $timesheetId . '"/>
+                    </form>
+                  </td>';
+
+            echo '</tr>'; // End table row
+        }
+
+        echo '</tbody></table>';
+    }
+
+    /*
+     * Includes options to amend associated timesheets status (reject, accept)
+     */
+    private function renderSubmitterTimesheetTableSummary($timesheets) {
+
+        $timesheetAttributesUsed = array_keys($timesheets[0]);
+        //print_r($timesheetAttributesUsed);
+
+        // Display table headers
+        echo '<table style="width:100%" class="class=table table-hover table-striped">
+                <thead>
+          <tr>';
+        foreach ($timesheetAttributesUsed as $timesheetAttribute) {
+            echo '<th scope="col">' . $timesheetAttribute . '</th>';
+        }
+
+        echo '</tr>
+                </thead>
+                
+                <tbody>';
+
+        //Display table contents
+        foreach ($timesheets as $timesheet) {
+            echo '<tr>'; // Table row begins here. Add option to change timesheet status here.
             $timesheetId = $timesheet['TimesheetID'];
 
             foreach ($timesheet as $key => $value) {
@@ -94,35 +143,6 @@ class TimesheetSummaryRenderView {
         echo " Timesheet TimeTo: " . $this->timesheets[0]['TimeTo'];
         echo " Timesheet contract: " . $this->timesheets[0]['Contract'];
     }
-
-
-    private function renderAdminTimesheetTableSummary($timesheets) {
-
-        $timesheetAttributesUsed = array_keys($timesheets[0]);
-        //print_r($timesheetAttributesUsed);
-
-        // Display table headers
-        echo '<table style="width:100%" class="table table-striped">
-          <tr>';
-        foreach ($timesheetAttributesUsed as $timesheetAttribute) {
-            echo '<th>' . $timesheetAttribute . '</th>';
-        }
-
-        echo '</tr>';
-
-        //Display table contents
-        foreach ($timesheets as $timesheet) {
-            echo '<tr>';
-            foreach ($timesheet as $key => $value) {
-                //print_r($value);
-                echo '<td>' . $value . '</td>';
-            }
-            echo '</tr>';
-        }
-
-        echo '</table>';
-    }
-
 
 }
 
