@@ -21,6 +21,28 @@
   <component name="ChangeListManager">
     <list default="true" id="1f5a5864-6e18-4279-a5de-3a7e2cafb29b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/component tests/javascript_add_btn/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/component tests/javascript_add_btn/.idea/javascript_add_btn.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/component tests/javascript_add_btn/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/component tests/javascript_add_btn/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/component tests/javascript_add_btn/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/component tests/javascript_add_btn/home.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/component tests/javascript_add_btn/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/component tests/javascript_add_btn/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/component tests/mail.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/component tests/user_login_session/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/component tests/user_login_session/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/component tests/user_login_session/.idea/user_login_session.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/component tests/user_login_session/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/component tests/user_login_session/class/DataSource.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/component tests/user_login_session/class/Member.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/component tests/user_login_session/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/component tests/user_login_session/login-action.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/component tests/user_login_session/logout.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/component tests/user_login_session/sql/schema.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/component tests/user_login_session/view/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/component tests/user_login_session/view/dashboard.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/component tests/user_login_session/view/login-form.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +105,7 @@
       <updated>1600354933027</updated>
       <workItem from="1600354934928" duration="34788000" />
       <workItem from="1600613319887" duration="87555000" />
-      <workItem from="1601289631736" duration="28381000" />
+      <workItem from="1601289631736" duration="31508000" />
     </task>
     <servers />
   </component>
@@ -133,10 +155,10 @@
       <screen x="1280" y="23" width="1920" height="1057" />
     </state>
     <state x="2235" y="87" width="802" height="758" key="dock-window-2/1280.23.1920.1057/0.23.1280.777@0.23.1280.777" timestamp="1600371100355" />
-    <state x="324" y="65" width="586" height="735" key="find.popup" timestamp="1601389346067">
-      <screen x="0" y="23" width="1280" height="777" />
+    <state x="-493" y="-1344" width="1172" height="1341" key="find.popup" timestamp="1601463698520">
+      <screen x="-731" y="-1417" width="2560" height="1417" />
     </state>
-    <state x="-493" y="-1344" width="1172" height="1341" key="find.popup/-731.-1417.2560.1417/0.23.1280.777@-731.-1417.2560.1417" timestamp="1601228862095" />
+    <state x="-493" y="-1344" width="1172" height="1341" key="find.popup/-731.-1417.2560.1417/0.23.1280.777@-731.-1417.2560.1417" timestamp="1601463698520" />
     <state x="324" y="65" width="586" height="735" key="find.popup/0.23.1280.777@0.23.1280.777" timestamp="1601389346067" />
     <state width="600" height="428" key="javadoc.popup" timestamp="1601373260769">
       <screen x="0" y="23" width="1280" height="777" />
