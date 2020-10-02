@@ -1,28 +1,10 @@
 <?php
 namespace Phppot;
 
-require_once $_SERVER['DOCUMENT_ROOT'] . '/APT/APTTimesheets/www/class/TimesheetSummaryRenderView.php';
-require_once $_SERVER['DOCUMENT_ROOT'] . '/APT/APTTimesheets/www/class/Timesheet.php';
 
-if (session_status() == PHP_SESSION_NONE) {
-    session_start();
-}
 
-if(empty($_SESSION["userId"])) {
-    echo "session userid empty";
-    //Header('Location: ./loginFormView.php');
+if(include_once($_SERVER['DOCUMENT_ROOT'] . '/APT/APTTimesheets/www/class/TimesheetSummaryRenderView.php')) {
+    echo 'required file imported';
 } else {
-    //echo 'userid: ' . $_SESSION["userId"];
+    echo 'required file error';
 }
-
-
-use http\Header;
-use \Phppot\Member;
-
-
-//echo "Timesheet summary page !"; ?>
-
-
-
-
-</html>
