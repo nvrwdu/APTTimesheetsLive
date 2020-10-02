@@ -15,7 +15,7 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
 //require_once 'Fileserver.php';
-//require_once 'FileServer.php';
+require_once '../class/FileServer.php';
 
 class Timesheet
 {
@@ -621,6 +621,5 @@ function show_image($img, $options = array(), $caption = '')
 //echo "END";
 
 
-echo 'working';
 
 //show_image($img);
