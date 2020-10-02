@@ -20,7 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4913094d-4b37-4bd7-9fc4-baa978e6aa62" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vendor/cloudinary/cloudinary_php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/cloudinary/cloudinary_php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../www/class/FileServer.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../www/class/FileServer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../www/class/TimesheetSummaryRenderView.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../www/class/TimesheetSummaryRenderView.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
