@@ -8,3 +8,5 @@ echo getcwd();
 //} else {
 //    echo 'required file error';
 //}
+echo '<br>';
+echo $_SERVER['DOCUMENT_ROOT'];
