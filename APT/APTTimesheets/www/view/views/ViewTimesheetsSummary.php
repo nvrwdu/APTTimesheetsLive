@@ -1,6 +1,13 @@
 <?php
 namespace Phppot;
 
+error_reporting(E_ALL);
+ini_set("display_errors", 1);
+
+
+
+
+
 //echo 'working';
 //echo getcwd();
 ////if(include_once($_SERVER['DOCUMENT_ROOT'] . '/APT/APTTimesheets/www/class/TimesheetSummaryRenderView.php')) {
@@ -15,5 +22,5 @@ namespace Phppot;
 //require_once $_SERVER['DOCUMENT_ROOT'] . '/APT/APTTimesheets/www/class/TimesheetSummaryRenderView.php';
 //require_once $_SERVER['DOCUMENT_ROOT'] . '/APT/APTTimesheets/www/class/Timesheet.php';
 
-require_once '../../class/TimesheetSummaryRenderView.php';
-//require_once '../../class/Timesheet.php';
+//require_once '../../class/TimesheetSummaryRenderView.php';
+require_once '../../class/Timesheet.php';
