@@ -1,26 +1,72 @@
 <?php
 namespace Phppot;
 
+
 error_reporting(E_ALL);
 ini_set("display_errors", 1);
 
 
+require_once $_SERVER['DOCUMENT_ROOT'] . '/APT/APTTimesheets/www/class/TimesheetSummaryRenderView.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/APT/APTTimesheets/www/class/Timesheet.php';
+
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+
+if(empty($_SESSION["userId"])) {
+    echo "session userid empty";
+    //Header('Location: ./loginFormView.php');
+} else {
+    //echo 'userid: ' . $_SESSION["userId"];
+}
+
+
+use http\Header;
+use \Phppot\Member;
+
+
+//echo "Timesheet summary page !"; ?>
+
+<!DOCTYPE html>
+<html>
+<head>
+
+    <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/APT/APTTimesheets/www/view/elements/ElementHeadTagElements.php'; ?>
+    <head/>
+
+<body>
+<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/APT/APTTimesheets/www/view/elements/ElementMainMenu.php'; ?>
+</body>
 
 
 
-//echo 'working';
-//echo getcwd();
-////if(include_once($_SERVER['DOCUMENT_ROOT'] . '/APT/APTTimesheets/www/class/TimesheetSummaryRenderView.php')) {
-////    echo 'required file imported';
-////} else {
-////    echo 'required file error';
-////}
-//echo '<br>';
-//echo $_SERVER['DOCUMENT_ROOT'];
+
+<?php
+// Get timesheet data for user
+$timesheetData = new Timesheet();
 
 
-//require_once $_SERVER['DOCUMENT_ROOT'] . '/APT/APTTimesheets/www/class/TimesheetSummaryRenderView.php';
-//require_once $_SERVER['DOCUMENT_ROOT'] . '/APT/APTTimesheets/www/class/Timesheet.php';
+switch ($_SESSION['userType']) {
+    case 'submitter' :
+        $timesheetData = $timesheetData->getTimesheetsByUserId($_SESSION['userId']);
+        //print_r($timesheetData);
+        //Pass timesheet data to renderer
+        $timesheetSummaryRenderView = new TimesheetSummaryRenderView($timesheetData);
+        $timesheetSummaryRenderView->render();
+        break;
+    case 'admin' :
+        $timesheetData = $timesheetData->getAssociatedUsersTimesheets($_SESSION['userId']);
 
-//require_once '../../class/TimesheetSummaryRenderView.php';
-require_once '../../class/Timesheet.php';
+        // Pass timesheet data to renderer
+        $timesheetSummaryRenderView = new TimesheetSummaryRenderView($timesheetData);
+        $timesheetSummaryRenderView->render();
+        break;
+    default :
+        echo 'user is neither a submitter, nor admin.' . __FILE__;
+
+}
+
+
+?>
+
+</html>
