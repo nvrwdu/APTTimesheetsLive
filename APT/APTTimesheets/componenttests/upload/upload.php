@@ -28,26 +28,26 @@ function show_image($img, $options = array(), $caption = '')
 
 $fromFileDir = $_FILES["fileToUpload"]["tmp_name"];
 
-//print_r($fromFileDir);
+print_r($fromFileDir);
 
-$default_upload_options = array('tags' => 'basic_sample');
-
-$resultFromUpload = \Cloudinary\Uploader::upload($fromFileDir,
-    array_merge(
-        $default_upload_options,
-        array(
-            'public_id' => 'nature',
-        )
-    ));
-
-$encodedResults = json_encode($resultFromUpload);
-
-$decodedResults = json_decode($encodedResults, true);
-
-echo($decodedResults['asset_id']);
-
-
-show_image($resultFromUpload);
+//$default_upload_options = array('tags' => 'basic_sample');
+//
+//$resultFromUpload = \Cloudinary\Uploader::upload($fromFileDir,
+//    array_merge(
+//        $default_upload_options,
+//        array(
+//            'public_id' => 'nature',
+//        )
+//    ));
+//
+//$encodedResults = json_encode($resultFromUpload);
+//
+//$decodedResults = json_decode($encodedResults, true);
+//
+//echo($decodedResults['asset_id']);
+//
+//
+//show_image($resultFromUpload);
 
 
 

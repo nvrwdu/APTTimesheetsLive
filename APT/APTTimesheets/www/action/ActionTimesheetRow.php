@@ -2,6 +2,8 @@
 namespace Phppot;
 
 
+use Cassandra\Time;
+
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
@@ -45,6 +47,17 @@ $singleTimesheet = $timesheet->getTimesheetById($_GET['timesheetId']);
 
 
 $_SESSION['singleTimesheet'] = $singleTimesheet;
+
+
+// Pass timesheet image URLs to SESSION
+$ts = new Timesheet();
+$timesheetImages = $ts->getTimesheetImagesData($_GET['timesheetId']);
+$_SESSION['images'] = $timesheetImages;
+
+
+
+
+
 
 //echo '<br>from SESSION:<br>';
 //print_r($_SESSION['singleTimesheet']);

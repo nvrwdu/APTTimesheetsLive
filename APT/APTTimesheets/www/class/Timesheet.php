@@ -14,7 +14,8 @@ if (session_status() == PHP_SESSION_NONE) {
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require_once $_SERVER['DOCUMENT_ROOT'] . '/APT/APTTimesheets/www/class/Fileserver.php';
+//require_once $_SERVER['DOCUMENT_ROOT'] . '/APT/APTTimesheets/www/class/Fileserver.php';
+require_once 'FileServer.php';
 
 class Timesheet
 {
@@ -260,6 +261,7 @@ class Timesheet
             'Please check account to check timesheet'
         );
 
+        return $currentTimesheetID;
     }
 
     private function savePlannedSynthetics($currentTimesheetID) {
@@ -597,27 +599,28 @@ function show_image($img, $options = array(), $caption = '')
 // Test Upload Timesheet to server
 //$img = FileServer::upload('forest-x.jpg'); // Upload to Cloudinary
 
-$timesheet = new Timesheet();
-//$timesheet->saveTimesheetImageData(49, $img);
-//$timesheet->saveTimesheetImagesData(49, array($img, $img, $img));
-$timesheet->saveTimesheetImagesData(50, array('forest-x.jpg'));
-$timesheet->saveTimesheetImagesData(50, array('forest-x.jpg'));
-$timesheet->saveTimesheetImagesData(50, array('forest-x.jpg'));
+//echo getcwd();
+//
+//$timesheet = new Timesheet();
+////$timesheet->saveTimesheetImageData(49, $img);
+////$timesheet->saveTimesheetImagesData(49, array($img, $img, $img));
+//$timesheet->saveTimesheetImagesData(50, array('forest-x.jpg'));
+//$timesheet->saveTimesheetImagesData(50, array('forest-x.jpg'));
+//$timesheet->saveTimesheetImagesData(50, array('forest-x.jpg'));
+//
+//echo '<br>';
+//
+////print_r($timesheet->getTimesheetImageData(49)[0]['TimesheetImageData']);
+//
+////$timesheetDataDecoded = json_decode($timesheet->getTimesheetImageData(49)[0]['TimesheetImageData'], true);
+//$timesheetImages = $timesheet->getTimesheetImagesData(50);
+//
+//for ($i=0 ; $i<count($timesheetImages) ; $i++) {
+//    echo '<br>' . $timesheetImages[0]['url'] . '<br>';
+//}
+//echo "END";
 
-echo '<br>';
 
-//print_r($timesheet->getTimesheetImageData(49)[0]['TimesheetImageData']);
-
-//$timesheetDataDecoded = json_decode($timesheet->getTimesheetImageData(49)[0]['TimesheetImageData'], true);
-$timesheetImages = $timesheet->getTimesheetImagesData(50);
-
-for ($i=0 ; $i<count($timesheetImages) ; $i++) {
-    echo '<br>' . $timesheetImages[0]['url'] . '<br>';
-}
-
-
-
-echo "YES";
 
 
 //show_image($img);

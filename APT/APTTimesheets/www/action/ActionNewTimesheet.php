@@ -15,8 +15,20 @@ require_once "../class/Timesheet.php";
 
 $ts = new Timesheet();
 $ts->setTimesheetValuesByAssocArray($_POST);
+$currentTimesheetId = $ts->saveTimesheet(); // Use to save supporting files to FileServer
 
-//print_r($ts->timesheetProperties['comments']);
+
+//print_r($_FILES['filesToUpload']);
+
+// Save timesheet files to server.
+$pathsToImages = $_FILES['filesToUpload']['tmp_name'];
+//print_r($pathsToImages);
+$ts->saveTimesheetImagesData($currentTimesheetId, $pathsToImages);
+
+
+
+
+
 
 //echo 'printing values:';
 
@@ -28,7 +40,8 @@ $ts->setTimesheetValuesByAssocArray($_POST);
 //    print_r($unplannedSynthetic["'comments'"]);
 //}
 
-$ts->saveTimesheet();
+
+
 //
 Header('Location: ../view/views/ViewTimesheetsSummary.php');
 ?> 

@@ -1,5 +1,5 @@
 <div class="main-timesheet-container">
-    <form class="pure-form pure-form-stacked" action="../../action/ActionNewTimesheet.php" method="post">
+    <form class="pure-form pure-form-stacked" action="../../action/ActionNewTimesheet.php" enctype="multipart/form-data"  method="post">
 
         <?php
         $formValues = $_GET;
@@ -130,15 +130,11 @@
 
             <br><br>
 
+<input type="file" name="filesToUpload[]" multiple="multiple" id="filesToUpload">
 
-                // Add image attachment code
-            <form action="upload.php" method="post" enctype="multipart/form-data">
-              Select image to upload:
-              <input type="file" name="fileToUpload" id="fileToUpload">
-              <input type="submit" value="Upload Image" name="submit">
-            </form>
 
-            ?>
+
+            <br><br>
 
             <?php
                 // Render buttons based on timesheet status
@@ -167,4 +163,19 @@
 
         </fieldset>
     </form>
+
+<?php
+
+/*
+ * Display timesheet images
+ */
+if ($_SESSION['images']) {
+    for ($i=0 ; $i<count($_SESSION['images']) ; $i++) {
+        echo '<img src="' . $_SESSION['images'][$i]['url'] . '"/>';
+    }
+}
+
+?>
+
+
 </div>
