@@ -22,7 +22,7 @@ use PHPMailer\PHPMailer\Exception;
 //require_once 'Fileserver.php';
 //require_once '../class/FileServer.php';
 
-require_once $_SERVER['DOCUMENT_ROOT'] . '/APT/APTTimesheets/www/class/FileServer.php';
+require_once __DIR__ . '/FileServer.php';
 
 
 class Timesheet
