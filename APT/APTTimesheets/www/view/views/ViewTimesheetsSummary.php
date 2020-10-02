@@ -23,14 +23,14 @@ use \Phppot\Member;
 
 //echo "Timesheet summary page !"; ?>
 
-<!DOCTYPE html>
-<html>
-<head>
-
-    <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/APT/APTTimesheets/www/view/elements/ElementHeadTagElements.php'; ?>
-    <head/>
-
-<body>
-<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/APT/APTTimesheets/www/view/elements/ElementMainMenu.php'; ?>
-</body>
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+<!--<head>-->
+<!---->
+<!--    --><?php //require_once $_SERVER['DOCUMENT_ROOT'] . '/APT/APTTimesheets/www/view/elements/ElementHeadTagElements.php'; ?>
+<!--    <head/>-->
+<!---->
+<!--<body>-->
+<?php //require_once $_SERVER['DOCUMENT_ROOT'] . '/APT/APTTimesheets/www/view/elements/ElementMainMenu.php'; ?>
+<!--</body>-->
 
