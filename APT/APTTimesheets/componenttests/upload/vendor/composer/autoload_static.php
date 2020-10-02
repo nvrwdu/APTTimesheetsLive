@@ -4,24 +4,10 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit7ab88d7d369cf7983876e1c1b6ebaa0c
+class ComposerStaticInitd72d5ade92e61b77d74bc123649107b3
 {
     public static $files = array (
         'c15243c55ab4c20eff78d1e24be20dac' => __DIR__ . '/..' . '/cloudinary/cloudinary_php/src/Helpers.php',
-    );
-
-    public static $prefixLengthsPsr4 = array (
-        'P' => 
-        array (
-            'PHPMailer\\PHPMailer\\' => 20,
-        ),
-    );
-
-    public static $prefixDirsPsr4 = array (
-        'PHPMailer\\PHPMailer\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/phpmailer/phpmailer/src',
-        ),
     );
 
     public static $classMap = array (
@@ -55,9 +41,7 @@ class ComposerStaticInit7ab88d7d369cf7983876e1c1b6ebaa0c
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit7ab88d7d369cf7983876e1c1b6ebaa0c::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit7ab88d7d369cf7983876e1c1b6ebaa0c::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInit7ab88d7d369cf7983876e1c1b6ebaa0c::$classMap;
+            $loader->classMap = ComposerStaticInitd72d5ade92e61b77d74bc123649107b3::$classMap;
 
         }, null, ClassLoader::class);
     }

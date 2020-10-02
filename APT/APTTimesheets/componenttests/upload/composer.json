@@ -1,6 +1,5 @@
 {
     "require": {
-        "phpmailer/phpmailer": "^6.1",
         "cloudinary/cloudinary_php": "dev-master"
     }
 }

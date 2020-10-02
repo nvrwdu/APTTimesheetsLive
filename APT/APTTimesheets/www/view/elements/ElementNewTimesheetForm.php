@@ -16,7 +16,7 @@
         <h5>Status : <?php echo $singleTimesheet[0]['Status']; ?></h5>
         <fieldset>
             <div class="date-timefrom-timeto-container">
-                <div class="date">
+                <div classhttps://apttimesheets.herokuapp.com/APT/APTTimesheets/componenttests/attachments/uploads/nature.jpg="date">
                     <label for="date">Date</label>
                     <input type="date" name="datetime[0]['date']" placeholder="Date" value="<? echo $singleTimesheet[0]['Date']; ?>" />
                 </div>
@@ -129,6 +129,16 @@
 
 
             <br><br>
+
+
+                // Add image attachment code
+            <form action="upload.php" method="post" enctype="multipart/form-data">
+              Select image to upload:
+              <input type="file" name="fileToUpload" id="fileToUpload">
+              <input type="submit" value="Upload Image" name="submit">
+            </form>
+
+            ?>
 
             <?php
                 // Render buttons based on timesheet status
