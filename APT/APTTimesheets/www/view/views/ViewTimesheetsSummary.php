@@ -5,9 +5,11 @@ namespace Phppot;
 error_reporting(E_ALL);
 ini_set("display_errors", 1);
 
+echo $_SERVER['DOCUMENT_ROOT'] . '<br>';
+echo __DIR__;
 
-require_once $_SERVER['DOCUMENT_ROOT'] . '/APT/APTTimesheets/www/class/TimesheetSummaryRenderView.php';
-require_once $_SERVER['DOCUMENT_ROOT'] . '/APT/APTTimesheets/www/class/Timesheet.php';
+require_once __DIR__ . '../../class/TimesheetSummaryRenderView.php';
+require_once __DIR__ . '../../class/Timesheet.php';
 
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
