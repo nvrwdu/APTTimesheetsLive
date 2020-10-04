@@ -19,7 +19,7 @@ if (session_status() == PHP_SESSION_NONE) {
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require_once './Fileserver.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/APT/APTTimesheets/www/class/Fileserver.php';
 
 
 
