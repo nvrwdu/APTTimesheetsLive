@@ -20,8 +20,8 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
 
-require_once __DIR__ . '/FileServer.php';
 
+require_once $_SERVER['DOCUMENT_ROOT'] . '/APT/APTTimesheets/www/class/FileServer.php';
 
 
 class Timesheet
