@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1f5a5864-6e18-4279-a5de-3a7e2cafb29b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/componenttests/upload/vendor/cloudinary/cloudinary_php" beforeDir="false" afterPath="$PROJECT_DIR$/componenttests/upload/vendor/cloudinary/cloudinary_php" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/www/composer.json</pharConfigPath>
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="composer.json" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/www/vendor/composer" />
+      <path value="$PROJECT_DIR$/www/vendor/phpmailer/phpmailer" />
+      <path value="$PROJECT_DIR$/www/vendor/cloudinary/cloudinary_php" />
+    </include_path>
+  </component>
+  <component name="ProjectId" id="1hdxmvkXZ24Bqiyz7MRYhmh94nv" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/www/view/elements" />
+      <recent name="$PROJECT_DIR$/www/view/css" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1f5a5864-6e18-4279-a5de-3a7e2cafb29b" name="Default Changelist" comment="" />
+      <created>1600354933027</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1600354933027</updated>
+      <workItem from="1600354934928" duration="34788000" />
+      <workItem from="1600613319887" duration="87555000" />
+      <workItem from="1601289631736" duration="49853000" />
+      <workItem from="1601623067456" duration="16237000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="209" y="77" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601374911122">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="209" y="77" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1280.777@0.23.1280.777" timestamp="1601374911122" />
+    <state x="240" y="77" key="#com.intellij.execution.impl.EditConfigurationsDialog/1280.23.1920.1057/0.23.1280.777@0.23.1280.777" timestamp="1600364791717" />
+    <state x="31" y="-1158" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1600948972431">
+      <screen x="-731" y="-1417" width="2560" height="1417" />
+    </state>
+    <state x="31" y="-1158" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-731.-1417.2560.1417/0.23.1280.777@-731.-1417.2560.1417" timestamp="1600948972431" />
+    <state x="381" y="165" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1280.777@0.23.1280.777" timestamp="1600434331479" />
+    <state x="463" y="342" key="NewPhpFileDialog" timestamp="1601369150750">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="463" y="342" key="NewPhpFileDialog/0.23.1280.777@0.23.1280.777" timestamp="1601369150750" />
+    <state x="-433" y="-1368" key="SettingsEditor" timestamp="1601652737558">
+      <screen x="-731" y="-1417" width="2560" height="1417" />
+    </state>
+    <state x="-433" y="-1368" key="SettingsEditor/-731.-1417.2560.1417/0.23.1280.777@-731.-1417.2560.1417" timestamp="1601652737558" />
+    <state x="149" y="50" key="SettingsEditor/0.23.1280.777@0.23.1280.777" timestamp="1601289672374" />
+    <state width="500" height="445" key="SwitcherDM" timestamp="1601235395618">
+      <screen x="-731" y="-1417" width="2560" height="1417" />
+    </state>
+    <state width="500" height="445" key="SwitcherDM/-731.-1417.2560.1417/0.23.1280.777@-731.-1417.2560.1417" timestamp="1601235395618" />
+    <state x="2207" y="129" width="802" height="916" key="dock-window-1" timestamp="1600370412310">
+      <screen x="1280" y="23" width="1920" height="1057" />
+    </state>
+    <state x="2207" y="129" width="802" height="916" key="dock-window-1/1280.23.1920.1057/0.23.1280.777@0.23.1280.777" timestamp="1600370412310" />
+    <state x="2235" y="87" width="802" height="758" key="dock-window-2" timestamp="1600371100355">
+      <screen x="1280" y="23" width="1920" height="1057" />
+    </state>
+    <state x="2235" y="87" width="802" height="758" key="dock-window-2/1280.23.1920.1057/0.23.1280.777@0.23.1280.777" timestamp="1600371100355" />
+    <state x="-382" y="-1349" width="1162" height="947" key="find.popup" timestamp="1601624068950">
+      <screen x="-731" y="-1417" width="2560" height="1417" />
+    </state>
+    <state x="-382" y="-1349" width="1162" height="947" key="find.popup/-731.-1417.2560.1417/0.23.1280.777@-731.-1417.2560.1417" timestamp="1601624068950" />
+    <state x="324" y="65" width="586" height="735" key="find.popup/0.23.1280.777@0.23.1280.777" timestamp="1601552877491" />
+    <state width="600" height="428" key="javadoc.popup" timestamp="1601373260769">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state width="600" height="428" key="javadoc.popup/0.23.1280.777@0.23.1280.777" timestamp="1601373260769" />
+    <state x="467" y="208" key="refactoring.ChangeSignatureDialog" timestamp="1600695633008">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="467" y="208" key="refactoring.ChangeSignatureDialog/0.23.1280.777@0.23.1280.777" timestamp="1600695633008" />
+    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup" timestamp="1600687445423">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup/0.23.1280.777@0.23.1280.777" timestamp="1600687445423" />
+  </component>
+</project>
