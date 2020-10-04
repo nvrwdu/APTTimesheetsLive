@@ -42,6 +42,8 @@ use \Phppot\Member;
 //echo "action" . $_GET['action'];
 if ($_GET['action'] == 'newtimesheet') {
     $_SESSION['singleTimesheet'] = '';
+    $_SESSION['images'] = ''; // Holds image URL's from server.
+    $_FILES = '';
 }
 
 ?>
