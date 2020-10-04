@@ -19,10 +19,8 @@ if (session_status() == PHP_SESSION_NONE) {
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-//require_once 'Fileserver.php';
-//require_once '../class/FileServer.php';
+require_once 'Fileserver.php';
 
-require_once __DIR__ . '/FileServer.php';
 
 
 class Timesheet
