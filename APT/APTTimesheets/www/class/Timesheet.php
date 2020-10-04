@@ -19,7 +19,9 @@ if (session_status() == PHP_SESSION_NONE) {
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require_once './FileServer.php';
+echo __DIR__ . '/FileServer.php';
+
+require_once __DIR__ . '/FileServer.php';
 
 
 
