@@ -1,8 +1,8 @@
 <?php
 namespace Phppot;
 
-require_once $_SERVER['DOCUMENT_ROOT'] . '/APT/APTTimesheets/www/class/Member.php';
-require_once $_SERVER['DOCUMENT_ROOT'] . '/APT/APTTimesheets/www/class/Timesheet.php';
+require_once __DIR__ . '/Member.php';
+require_once __DIR__ . '/Timesheet.php';
 
 
 
