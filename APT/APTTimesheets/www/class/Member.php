@@ -47,6 +47,41 @@ class Member
         return $userType;
     }
 
+    /*
+     * newMemberArr keys : user_name, display_name, password, user_type, supervisorId
+     */
+    public function createNewMember($newMemberArr) {
+        $md5Password = md5($newMemberArr['password']);
+
+        if (empty($newMemberArr['user_name']) or empty($newMemberArr['password'])) {
+            echo "Username or password is empty";
+            //echo "vals:" . $newMemberArr['user_name'] . $newMemberArr['password'];
+            return 0;
+        } else {
+            $query = "INSERT INTO registered_users (user_name, display_name, password, email, user_type, supervisorId)
+                        VALUES (?,?,?,?,?,?)";
+            $paramType = "sssssi";
+            $paramArray = array($newMemberArr['user_name'],
+                                $newMemberArr['display_name'],
+                                $newMemberArr['password'],
+                                $newMemberArr['email'],
+                                $newMemberArr['user_type'],
+                                $newMemberArr['supervisorId']);
+            $newUserQueryResult = $this->ds->insert($query, $paramType, $paramArray);
+
+            echo $newUserQueryResult;
+        }
+    }
+
+    public function deleteMember($userId) {
+        $query = "DELETE FROM registered_users WHERE id=?";
+        $paramType = "i";
+        $paramArray = array($userId);
+        $deleteUserResult = $this->ds->select($query, $paramType, $paramArray);
+
+        echo 'member with user id: ' . $userId . ' deleted';
+    }
+
 
 }
 
@@ -56,4 +91,17 @@ class Member
 //
 //print_r($_SESSION["userEmail"]);
 
+$newMemberDetails =
+[
+    'user_name'=>'smith',
+    'display_name'=>'Mr Smith',
+    'password'=>'password',
+    'email'=>'email@email.com',
+    'user_type'=>'submitter',
+    'supervisorId'=>1
+];
+
+$memberHandler = new Member();
+//$memberHandler->createNewMember($newMemberDetails);
+//$memberHandler->deleteMember(7);
 
