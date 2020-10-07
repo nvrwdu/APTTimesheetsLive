@@ -256,16 +256,16 @@ class Timesheet
         //dispatch email to submitter
         $this->sendMailTo($_SESSION["userEmail"],
             'APT',
-            'You\'ve submitted a new timesheet',
-            'Once reviewed, you\'ll receive a email update'
+            'You\'ve submitted a new timesheet (' . $currentTimesheetID . ')',
+            'Once reviewed, you\'ll receive a email update. <br>Thanks.'
         );
 
 
         //dispatch email to submitters admin
         $this->sendMailTo($adminEmail,
             'APT',
-            'New timesheet submitted',
-            'Please check account to check timesheet'
+            'New timesheet: ' . $currentTimesheetID . ' submitted by ' . $_SESSION['userEmail'],
+            'Please login to review timesheet'
         );
 
         return $currentTimesheetID;
@@ -279,8 +279,16 @@ class Timesheet
 //        $syntheticQuantity = $this->timesheetProperties['plannedsynthetic'][1]["'quantity'"];
 
         foreach ($this->timesheetProperties['plannedsynthetic'] as $plannedSynthetic) {
+            echo "planned synthetic print_r: ";
+            print_r($plannedSynthetic);
+
             $syntheticName = $plannedSynthetic["'plannedsynthetic'"];
             $syntheticQuantity = $plannedSynthetic["'quantity'"];
+
+            echo 'current timesheet id: ' . $currentTimesheetID;
+            echo 'synthetic name: ' . $syntheticName;
+            echo 'synthetic quantity: ' . $syntheticQuantity;
+
 
             $query = "INSERT INTO Synthetics (TimesheetID, Name, Quantity, syntheticType)
           VALUES (?, ?, ?, ?)";

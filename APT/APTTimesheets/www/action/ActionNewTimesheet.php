@@ -11,7 +11,7 @@ if (session_status() == PHP_SESSION_NONE) {
 
 require_once "../class/Timesheet.php";
 
-//print_r($_POST);
+print_r($_POST);
 
 $ts = new Timesheet();
 $ts->setTimesheetValuesByAssocArray($_POST);
@@ -22,8 +22,17 @@ $currentTimesheetId = $ts->saveTimesheet(); // Use to save supporting files to F
 
 // Save timesheet files to server.
 $pathsToImages = $_FILES['filesToUpload']['tmp_name'];
-//print_r($pathsToImages);
-$ts->saveTimesheetImagesData($currentTimesheetId, $pathsToImages);
+
+
+//echo "current tsid: " . $currentTimesheetId;
+//echo "paths to images: " . $pathsToImages;
+
+if (!empty($pathsToImages[0])) {
+    $ts->saveTimesheetImagesData($currentTimesheetId, $pathsToImages);
+}
+
+
+
 
 
 
@@ -43,5 +52,5 @@ $ts->saveTimesheetImagesData($currentTimesheetId, $pathsToImages);
 
 
 //
-Header('Location: ../view/views/ViewTimesheetsSummary.php');
+//Header('Location: ../view/views/ViewTimesheetsSummary.php');
 ?> 

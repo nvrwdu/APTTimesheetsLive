@@ -72,6 +72,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/www/helpers" />
       <recent name="$PROJECT_DIR$/www/view/elements" />
       <recent name="$PROJECT_DIR$/www/view/css" />
     </key>
@@ -87,7 +88,7 @@
       <workItem from="1600354934928" duration="34788000" />
       <workItem from="1600613319887" duration="87555000" />
       <workItem from="1601289631736" duration="49853000" />
-      <workItem from="1601623067456" duration="22124000" />
+      <workItem from="1601623067456" duration="39473000" />
     </task>
     <servers />
   </component>
@@ -117,9 +118,14 @@
     </state>
     <state x="31" y="-1158" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-731.-1417.2560.1417/0.23.1280.777@-731.-1417.2560.1417" timestamp="1600948972431" />
     <state x="381" y="165" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1280.777@0.23.1280.777" timestamp="1600434331479" />
-    <state x="463" y="342" key="NewPhpFileDialog" timestamp="1601369150750">
-      <screen x="0" y="23" width="1280" height="777" />
+    <state x="586" y="-914" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1601991718376">
+      <screen x="-731" y="-1417" width="2560" height="1417" />
     </state>
+    <state x="586" y="-914" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/-731.-1417.2560.1417/0.23.1280.777@-731.-1417.2560.1417" timestamp="1601991718376" />
+    <state x="195" y="-835" key="NewPhpFileDialog" timestamp="1602078550630">
+      <screen x="-731" y="-1417" width="2560" height="1417" />
+    </state>
+    <state x="195" y="-835" key="NewPhpFileDialog/-731.-1417.2560.1417/0.23.1280.777@-731.-1417.2560.1417" timestamp="1602078550630" />
     <state x="463" y="342" key="NewPhpFileDialog/0.23.1280.777@0.23.1280.777" timestamp="1601369150750" />
     <state x="-433" y="-1368" key="SettingsEditor" timestamp="1601652737558">
       <screen x="-731" y="-1417" width="2560" height="1417" />
@@ -138,10 +144,10 @@
       <screen x="1280" y="23" width="1920" height="1057" />
     </state>
     <state x="2235" y="87" width="802" height="758" key="dock-window-2/1280.23.1920.1057/0.23.1280.777@0.23.1280.777" timestamp="1600371100355" />
-    <state x="324" y="65" width="599" height="735" key="find.popup" timestamp="1601890081365">
-      <screen x="0" y="23" width="1280" height="777" />
+    <state x="-382" y="-1349" width="1162" height="947" key="find.popup" timestamp="1601990120445">
+      <screen x="-731" y="-1417" width="2560" height="1417" />
     </state>
-    <state x="-382" y="-1349" width="1162" height="947" key="find.popup/-731.-1417.2560.1417/0.23.1280.777@-731.-1417.2560.1417" timestamp="1601827950766" />
+    <state x="-382" y="-1349" width="1162" height="947" key="find.popup/-731.-1417.2560.1417/0.23.1280.777@-731.-1417.2560.1417" timestamp="1601990120445" />
     <state x="324" y="65" width="599" height="735" key="find.popup/0.23.1280.777@0.23.1280.777" timestamp="1601890081365" />
     <state width="600" height="428" key="javadoc.popup" timestamp="1601373260769">
       <screen x="0" y="23" width="1280" height="777" />

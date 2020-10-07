@@ -53,7 +53,7 @@ class Member
     public function createNewMember($newMemberArr) {
         $md5Password = md5($newMemberArr['password']);
 
-        if (empty($newMemberArr['user_name']) or empty($newMemberArr['password'])) {
+        if (empty($newMemberArr['user_name']) or empty($md5Password)) {
             echo "Username or password is empty";
             //echo "vals:" . $newMemberArr['user_name'] . $newMemberArr['password'];
             return 0;
@@ -63,7 +63,7 @@ class Member
             $paramType = "sssssi";
             $paramArray = array($newMemberArr['user_name'],
                                 $newMemberArr['display_name'],
-                                $newMemberArr['password'],
+                                $md5Password,
                                 $newMemberArr['email'],
                                 $newMemberArr['user_type'],
                                 $newMemberArr['supervisorId']);
@@ -91,17 +91,17 @@ class Member
 //
 //print_r($_SESSION["userEmail"]);
 
-$newMemberDetails =
-[
-    'user_name'=>'smith',
-    'display_name'=>'Mr Smith',
-    'password'=>'password',
-    'email'=>'email@email.com',
-    'user_type'=>'submitter',
-    'supervisorId'=>1
-];
+//$newMemberDetails =
+//[
+//    'user_name'=>'smith',
+//    'display_name'=>'Mr Smith',
+//    'password'=>'password',
+//    'email'=>'email@email.com',
+//    'user_type'=>'submitter',
+//    'supervisorId'=>1
+//];
 
-$memberHandler = new Member();
+//$memberHandler = new Member();
 //$memberHandler->createNewMember($newMemberDetails);
 //$memberHandler->deleteMember(7);
 

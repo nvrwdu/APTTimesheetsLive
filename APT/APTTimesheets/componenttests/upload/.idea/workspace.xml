@@ -24,6 +24,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vendor/cloudinary/cloudinary_php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/cloudinary/cloudinary_php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../www/class/Member.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../www/class/Member.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../www/class/Timesheet.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../www/class/Timesheet.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +72,7 @@
       <updated>1601482700392</updated>
       <workItem from="1601482701747" duration="1379000" />
       <workItem from="1601484451091" duration="9444000" />
-      <workItem from="1601623478451" duration="3021000" />
+      <workItem from="1601623478451" duration="3026000" />
     </task>
     <servers />
   </component>

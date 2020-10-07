@@ -5,7 +5,7 @@ namespace Phppot;
 //error_reporting(E_ALL);
 //ini_set("display_errors", 1);
 
-echo $_SERVER['DOCUMENT_ROOT'] . '<br>';
+//echo $_SERVER['DOCUMENT_ROOT'] . '<br>';
 
 require_once $_SERVER['DOCUMENT_ROOT'] . '/APT/APTTimesheets/www/class/TimesheetSummaryRenderView.php';
 require_once $_SERVER['DOCUMENT_ROOT'] . '/APT/APTTimesheets/www/class/Timesheet.php';
