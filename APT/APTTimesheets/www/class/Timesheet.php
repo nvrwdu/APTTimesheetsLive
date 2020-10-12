@@ -108,7 +108,7 @@ class Timesheet
         //$query = "SELECT * FROM Timesheets WHERE supervisorId = ?";
 
         //$query = "SELECT * FROM Timesheets WHERE";
-        $query = "SELECT * FROM Timesheets LEFT JOIN registered_users ON Timesheets.UserId = registered_users.id WHERE registered_users.supervisorId=?";
+        $query = "SELECT * FROM Timesheets LEFT JOIN registered_users ON Timesheets.UserId = registered_users.id WHERE registered_users.supervisorId=? ORDER BY TimesheetID";
         $paramType = "i";
         $paramArray = Array($adminUserId);
 
