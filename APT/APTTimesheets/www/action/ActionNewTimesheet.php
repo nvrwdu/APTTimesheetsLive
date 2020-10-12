@@ -52,5 +52,5 @@ if (!empty($pathsToImages[0])) {
 
 
 //
-//Header('Location: ../view/views/ViewTimesheetsSummary.php');
+Header('Location: ../view/views/ViewTimesheetsSummary.php');
 ?> 
